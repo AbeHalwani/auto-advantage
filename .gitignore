@@ -1,14 +1,32 @@
-# Temporary screenshots & test artifacts
-test_*.png
-slice_*.png
-*.log
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.cert
+*.token
+credentials.json
+secrets.json
 
-# Environment & tooling
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
 .wrangler/
+
+# Code graphs and agent tools
+graphify-out/
 .stitch/
 .stitch.json
 .agents/
 
-# System files
+# Logs and screenshots
+*.log
+test_*.png
+slice_*.png
+
+# Operating system files
 .DS_Store
 Thumbs.db
