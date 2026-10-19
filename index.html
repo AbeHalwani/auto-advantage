@@ -378,6 +378,10 @@
       align-items: center;
     }
 
+    .hero-mobile-media {
+      display: none;
+    }
+
     .hero-content-left {
       max-width: 540px;
       padding: 10px 0 20px 0;
@@ -2826,53 +2830,95 @@
         max-width: 135px;
       }
 
-      /* Hero Section (Illuminated Car Crown + Left Editorial Focus) */
+      /* Hero Section (Clean Top Margin + Mobile Video Frame Below Text) */
       .hero {
         min-height: auto;
-        padding: 16px 0 0 0;
+        padding: 14px 0 0 0;
         overflow: hidden;
       }
       .hero-video-backdrop {
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        width: 100%;
-      }
-      .hero-video-element {
-        position: absolute;
-        left: 50%;
-        top: 24%;
-        width: 100%;
-        min-width: 100%;
-        height: 48%;
-        min-height: auto;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
-        opacity: 0.65;
-        filter: contrast(1.15) brightness(1.05);
-      }
-      .hero-video-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(8, 9, 11, 0.35) 0%, rgba(8, 9, 11, 0.72) 24%, rgba(8, 9, 11, 0.98) 46%, #08090B 100%);
+        display: none !important;
       }
       .hero-content-left {
         max-width: 100%;
-        padding: 95px 0 8px 0;
+        padding: 0 !important;
         text-align: left;
       }
       .hero-headline {
         font-size: clamp(24px, 6.2vw, 29px);
         line-height: 1.15;
         letter-spacing: -0.02em;
-        margin-bottom: 14px;
+        margin-top: 4px;
+        margin-bottom: 12px;
         word-break: normal;
         overflow-wrap: break-word;
       }
       .hero-lead-text {
         font-size: 14.5px;
         line-height: 1.55;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
+      }
+
+      /* Mobile Cinematic Video Feature (Aesthetically Framed Below Text) */
+      .hero-mobile-media {
+        display: block !important;
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+      .hero-mobile-media-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(220, 38, 38, 0.22);
+      }
+      .hero-mobile-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: contrast(1.12) brightness(1.02);
+      }
+      .hero-mobile-video-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(8, 9, 11, 0.05) 0%, transparent 65%, rgba(8, 9, 11, 0.65) 100%);
+      }
+      .hero-mobile-pill {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px;
+        border-radius: 9999px;
+        background: rgba(10, 12, 16, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        font-family: var(--font-display);
+        font-size: 11px;
+        font-weight: 700;
+        color: #F8FAFC;
+        letter-spacing: 0.02em;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      }
+      .hmm-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22C55E;
+        box-shadow: 0 0 8px #22C55E;
+        animation: pulseLed 2s infinite ease-in-out;
+      }
+      @keyframes pulseLed {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.85); }
       }
       .hero-actions {
         display: flex;
@@ -3209,6 +3255,20 @@
         <p class="hero-lead-text">
           Certified Mechanics that specialize in Collision repair. <strong>Computerized laser unibody realignment</strong>, climate controlled downdraft spray booths, and direct insurance claims management with all major carriers.
         </p>
+
+        <!-- Mobile Cinematic Video Feature (Aesthetically Framed Below Main Text) -->
+        <div class="hero-mobile-media">
+          <div class="hero-mobile-media-frame">
+            <video class="hero-mobile-video" autoplay muted loop playsinline preload="auto" poster="assets/hero_test_screenshot_v2.png">
+              <source src="assets/hero_cinematic.mp4" type="video/mp4">
+            </video>
+            <div class="hero-mobile-video-overlay"></div>
+            <div class="hero-mobile-pill">
+              <span class="hmm-dot"></span>
+              <span>Precision Calibration Bay</span>
+            </div>
+          </div>
+        </div>
 
         <div class="hero-actions">
           <a href="#book-appointment" class="btn-hero-primary">
@@ -4917,6 +4977,33 @@
         }
       });
     });
+  })();
+
+  // Autoplay video initialization for mobile and desktop
+  (function() {
+    function initVideos() {
+      document.querySelectorAll('video').forEach(function(v) {
+        v.muted = true;
+        v.playsInline = true;
+        var p = v.play();
+        if (p !== undefined) {
+          p.catch(function() {
+            var playOnTouch = function() {
+              v.play();
+              window.removeEventListener('touchstart', playOnTouch);
+              window.removeEventListener('click', playOnTouch);
+            };
+            window.addEventListener('touchstart', playOnTouch, { passive: true });
+            window.addEventListener('click', playOnTouch, { passive: true });
+          });
+        }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideos);
+    } else {
+      initVideos();
+    }
   })();
   </script>
 

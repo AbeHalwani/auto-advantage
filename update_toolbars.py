@@ -32,6 +32,16 @@ preview_css = """
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
 }
 
+@media (max-width: 768px) {
+  #review-toolbar {
+    bottom: 74px !important;
+    max-width: calc(100% - 32px);
+    padding: 6px 8px;
+    font-size: 11.5px;
+    gap: 6px;
+  }
+}
+
 #review-toolbar.minimized {
   transform: translateX(-50%) translateY(120px);
   opacity: 0;
@@ -43,6 +53,16 @@ preview_css = """
   position: fixed;
   bottom: 20px;
   right: 24px;
+}
+
+@media (max-width: 768px) {
+  #review-floating-trigger {
+    bottom: 74px !important;
+    right: 16px !important;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
   z-index: 9999998;
   background: #DC2626;
   color: #FFFFFF;
