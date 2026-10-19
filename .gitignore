@@ -1,0 +1,14 @@
+# Temporary screenshots & test artifacts
+test_*.png
+slice_*.png
+*.log
+
+# Environment & tooling
+.wrangler/
+.stitch/
+.stitch.json
+.agents/
+
+# System files
+.DS_Store
+Thumbs.db

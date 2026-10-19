@@ -1,0 +1,5259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+
+#site-preview-root {
+  color-scheme: dark;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  background: #080C14;
+  color: #F1F5F9;
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px; /* space so bottom floating toolbar does not overlap footer */
+}
+
+
+    /* ============================================================
+       AUTO ADVANTAGE COLLISION & AUTO REPAIR
+       Awwwards-Inspired Automotive Editorial Design System
+       Zero Nested Boxes • Pure Whitespace • Editorial Typography
+       ============================================================ */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Porsche GT Obsidian & Laser Crimson Palette */
+      --dark: #07080B;
+      --dark-surface: #0C0E14;
+      --dark-subtle: #11141C;
+      --dark-card: #0E1015;
+      --crimson: #DC2626;
+      --crimson-hover: #EF4444;
+      --crimson-glow: rgba(220, 38, 38, 0.22);
+      --amber-flash: #F59E0B;
+      --blue: #2563EB;
+      --blue-subtle: rgba(37, 99, 235, 0.12);
+
+      --white: #FFFFFF;
+      --canvas: #FAFBFD;
+      --hairline-dark: rgba(255, 255, 255, 0.08);
+      --hairline-crimson: rgba(220, 38, 38, 0.4);
+      --hairline-light: rgba(0, 0, 0, 0.08);
+
+      --text-dark: #F8FAFC;
+      --text-dark-muted: #94A3B8;
+      --text-light: #0F172A;
+      --text-light-muted: #64748B;
+
+      /* Typography: Restored to Pure Original Fonts */
+      --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --max-w: 1320px;
+    }
+
+    /* Editorial Crimson Accent */
+    .accent {
+      color: var(--crimson);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--dark);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      font-weight: 400;
+      background: var(--dark);
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+    }
+
+    /* ============================================================
+       TOP EDITORIAL HEADER
+       ============================================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 12, 20, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--hairline-dark);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 84px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-logo-img {
+      height: 58px;
+      width: auto;
+      max-width: 290px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-brand-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-brand-title .brand-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .nav-brand-title .brand-sub {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crimson);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-menu a {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--text-dark-muted);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-menu a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta-cluster {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-phone {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.2s;
+    }
+
+    .nav-phone:hover {
+      color: var(--crimson-hover);
+    }
+
+    .btn-book-appt {
+      background: var(--crimson);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-book-appt:hover {
+      background: var(--crimson-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(220, 38, 38, 0.55);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Mobile Hamburger Toggle & Drawer */
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 101;
+      margin-left: 4px;
+    }
+
+    .nav-mobile-toggle span {
+      width: 100%;
+      height: 2px;
+      background: #FFFFFF;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-mobile-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .nav-mobile-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-mobile-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .nav-mobile-drawer {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(11, 12, 14, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 18px 24px 24px 24px;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.85);
+      z-index: 99;
+      animation: drawerSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes drawerSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .nav-mobile-drawer.open {
+      display: flex;
+    }
+
+    .nmd-link {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #E2E8F0;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      transition: color 0.2s, padding-left 0.2s;
+      text-decoration: none;
+    }
+
+    .nmd-link:hover {
+      color: var(--crimson);
+      padding-left: 6px;
+    }
+
+    .nmd-footer {
+      padding-top: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nmd-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--crimson);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    /* ============================================================
+       CINEMATIC VIDEO HERO (LEFT ORGANIZED CONTENT)
+       ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 16px 0 0 0;
+      background: #000000;
+      border-bottom: 1px solid var(--hairline-dark);
+      overflow: hidden;
+    }
+
+    .hero-video-backdrop {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-video-element {
+      position: absolute;
+      top: 35%;
+      left: 75%;
+      width: 145%;
+      height: 100%;
+      min-width: 145%;
+      min-height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      opacity: 0.98;
+      filter: contrast(1.15) brightness(1.0);
+    }
+
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 65% 50% at 88% 18%, rgba(195, 25, 35, 0.14) 0%, rgba(7, 8, 11, 0) 70%),
+                  linear-gradient(90deg, rgba(8, 9, 11, 0.98) 0%, rgba(8, 9, 11, 0.94) 38%, rgba(8, 9, 11, 0.25) 56%, rgba(8, 9, 11, 0.0) 100%),
+                  linear-gradient(180deg, rgba(8, 9, 11, 0.7) 0%, transparent 35%, rgba(8, 9, 11, 0.95) 100%);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content-left {
+      max-width: 540px;
+      padding: 10px 0 20px 0;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(35px, 4.0vw, 62px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      color: var(--white);
+      margin-bottom: 20px;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-headline span.accent {
+      color: var(--crimson);
+      text-shadow: 0 0 30px rgba(229, 35, 32, 0.45);
+    }
+
+    .hero-headline span.stroke {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);
+    }
+
+    .hero-lead-text {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(241, 245, 249, 0.9);
+      margin-bottom: 32px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-lead-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn-hero-primary {
+      background: var(--crimson);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 18px rgba(229, 35, 32, 0.35);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--crimson-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(229, 35, 32, 0.55);
+    }
+
+    .btn-hero-secondary {
+      background: rgba(18, 19, 22, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 16px 28px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .hero-trust-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #CBD5E1;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-trust-badge svg {
+      color: var(--crimson);
+      flex-shrink: 0;
+    }
+
+    .hero-bottom-ribbon {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin-top: 40px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(180deg, rgba(8, 9, 11, 0) 0%, rgba(8, 9, 11, 0.82) 100%);
+    }
+
+    .hero-ribbon-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .hr-item {
+      padding: 14px 18px;
+      background: rgba(18, 19, 22, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      transition: border-color 0.25s, transform 0.25s, background 0.25s;
+    }
+
+    .hr-item:hover {
+      background: rgba(24, 25, 30, 0.88);
+      border-color: rgba(229, 35, 32, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .hr-item strong {
+      display: block;
+      font-size: 11.5px;
+      color: var(--crimson);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .hr-item span {
+      display: block;
+      font-size: 13px;
+      color: #E2E8F0;
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       EDITORIAL PHILOSOPHY STATEMENT
+       ============================================================ */
+    .statement-section {
+      padding: 100px 0;
+      background: var(--canvas);
+      color: var(--text-light);
+      border-bottom: 1px solid var(--hairline-light);
+    }
+
+    .statement-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .statement-quote {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: var(--text-light);
+    }
+
+    .statement-quote span.red {
+      color: var(--crimson);
+    }
+
+    .statement-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sb-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .sb-check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(220, 38, 38, 0.12);
+      color: var(--crimson);
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .sb-text {
+      color: var(--text-light-muted);
+    }
+
+    .sb-text strong {
+      color: var(--text-light);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 16px;
+    }
+
+    /* ============================================================
+       SERVICES SECTION (INSPIRED BY WASEEM RANGE ROVER)
+       ============================================================ */
+    .services-section {
+      padding: 120px 0;
+      background: radial-gradient(ellipse 70% 55% at 85% 15%, rgba(195, 25, 35, 0.16) 0%, rgba(140, 18, 26, 0.06) 45%, rgba(7, 8, 11, 0) 70%), #07080B;
+      color: #FFFFFF;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 64px auto;
+    }
+
+    .sec-eyebrow {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .services-title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      line-height: 1.08;
+    }
+
+    .services-subtitle {
+      font-size: 17px;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: #0C0E14;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(220, 38, 38, 0.55);
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.8), 0 0 26px rgba(220, 38, 38, 0.22);
+    }
+
+    .service-card-media {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+      background: #1A1C20;
+    }
+
+    .service-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .service-card:hover .service-card-media img {
+      transform: scale(1.08);
+    }
+
+    .service-card-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(18, 19, 22, 0.85) 100%);
+      pointer-events: none;
+    }
+
+    .service-card-pill {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      z-index: 2;
+    }
+
+    .service-card-icon-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 66px;
+      height: 66px;
+      background: var(--crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      z-index: 2;
+      border-bottom-right-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+    }
+
+    .service-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-title-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .service-accent-bar {
+      width: 3px;
+      height: 22px;
+      background: var(--crimson);
+      margin-right: 12px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin: 0;
+      line-height: 1.25;
+    }
+    .service-card-desc {
+      color: #94A3B8;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 22px 0;
+      flex-grow: 1;
+    }
+
+    .service-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #E2E8F0;
+      transition: color 0.2s ease, transform 0.2s ease;
+      margin-top: auto;
+    }
+
+    .service-card:hover .service-card-cta {
+      color: var(--crimson);
+      transform: translateX(4px);
+    }
+
+
+    /* ============================================================
+       CRAFTSMANSHIP & HIGH-RES BEFORE/AFTER COMPARISON
+       ============================================================ */
+    .craftsmanship {
+      padding: 120px 0;
+      background: radial-gradient(ellipse 70% 55% at 85% 15%, rgba(195, 25, 35, 0.16) 0%, rgba(140, 18, 26, 0.06) 45%, rgba(7, 8, 11, 0) 70%), #07080B;
+      color: var(--white);
+      border-bottom: 1px solid var(--hairline-dark);
+    }
+
+    .craft-header-block {
+      max-width: 820px;
+      margin-bottom: 56px;
+    }
+
+    .craft-header-block h2 {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.2vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .craft-header-block p {
+      font-size: 17px;
+      color: var(--text-dark-muted);
+      line-height: 1.7;
+    }
+
+    /* Before / After Showcase Frame */
+    .before-after-stage {
+      position: relative;
+      width: 100%;
+      border: 1px solid var(--hairline-dark);
+      background: var(--dark-surface);
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .before-after-stage img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Floating Labels for the Split View (Centered & Doubled Size) */
+    .ba-label {
+      position: absolute;
+      top: 24px;
+      padding: 16px 40px;
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: rgba(8, 12, 20, 0.94);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 10px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .ba-label-left {
+      left: 25%;
+      transform: translateX(-50%);
+      color: #FFA5A5;
+      border-left: 4px solid var(--crimson);
+    }
+
+    .ba-label-right {
+      left: 75%;
+      transform: translateX(-50%);
+      color: #93C5FD;
+      border-right: 4px solid var(--blue);
+    }
+
+    .ba-caption-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--dark-surface);
+      border-top: 1px solid var(--hairline-dark);
+      font-size: 13px;
+      color: var(--text-dark-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .ba-caption-bar strong {
+      color: var(--white);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Spec list below image (High-Performance Precision Cards) */
+    .craft-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding-top: 36px;
+      border-top: 1px solid var(--hairline-dark);
+    }
+
+    .csg-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      background: #0C0E14;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px 20px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    .csg-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #DC2626, transparent);
+      opacity: 0.35;
+      transition: opacity 0.25s ease;
+    }
+
+    .csg-item.csg-active {
+      border-color: var(--crimson);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(220, 38, 38, 0.16);
+    }
+
+    .csg-item.csg-active::before {
+      opacity: 1;
+      background: var(--crimson);
+    }
+
+    .csg-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(220, 38, 38, 0.55);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(220, 38, 38, 0.18);
+    }
+
+    .csg-item:hover::before {
+      opacity: 1;
+    }
+
+    .csg-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .csg-index {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 0.04em;
+    }
+
+    .csg-item.csg-active .csg-index {
+      color: var(--crimson);
+    }
+
+    .csg-metric {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: none;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #94A3B8;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.25s ease;
+    }
+
+    .csg-item.csg-active .csg-metric {
+      background: var(--crimson);
+      color: #FFFFFF;
+      border-color: var(--crimson);
+      box-shadow: 0 0 12px rgba(220, 38, 38, 0.35);
+    }
+
+    .csg-item:hover .csg-metric {
+      color: #FFFFFF;
+      border-color: var(--crimson);
+      background: var(--crimson);
+      box-shadow: 0 0 12px rgba(220, 38, 38, 0.45);
+    }
+
+    .csg-body {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .csg-title {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin: 0;
+    }
+
+    .csg-sub-bullet {
+      font-size: 12.5px;
+      font-family: var(--font-body);
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .bullet-arrow {
+      color: var(--crimson);
+      font-size: 11px;
+      line-height: 1;
+    }
+
+    .csg-desc {
+      font-size: 13px;
+      font-family: var(--font-body);
+      color: var(--text-dark-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ============================================================
+       INSTAGRAM FEED SECTION
+       ============================================================ */
+    .instagram-section {
+      padding: 100px 0;
+      background: var(--canvas);
+      color: var(--text-light);
+      border-bottom: 1px solid var(--hairline-light);
+    }
+
+    .ig-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 44px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .ig-title-area h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 3.8vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      line-height: 1.05;
+      margin-top: 6px;
+    }
+
+    .btn-ig-follow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--dark);
+      color: var(--white);
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.25s;
+    }
+
+    .btn-ig-follow:hover {
+      background: var(--crimson);
+      transform: translateY(-2px);
+    }
+
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ig-card {
+      position: relative;
+      background: var(--dark);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--hairline-light);
+      display: block;
+      group: relative;
+    }
+
+    .ig-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .ig-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .ig-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 12, 20, 0.82);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: var(--white);
+    }
+
+    .ig-card:hover .ig-overlay {
+      opacity: 1;
+    }
+
+    .ig-overlay-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #93C5FD;
+    }
+
+    .ig-overlay-bottom p {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .ig-view-link {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--crimson-hover);
+    }
+
+    /* ============================================================
+       DIRECT INSURANCE CARRIER MATRIX (CENTERED & PROMINENT)
+       ============================================================ */
+    .insurance-matrix {
+      padding: 56px 0;
+      background: #0C0D10;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+
+    .im-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .im-title {
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: none;
+      color: var(--crimson);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .im-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px 18px;
+      width: 100%;
+    }
+
+    .im-card {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px 18px;
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 52px;
+      min-width: 0;
+      transition: all 0.22s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      white-space: nowrap;
+    }
+
+    .im-card:hover {
+      border-color: rgba(229, 35, 32, 0.55);
+      background: rgba(229, 35, 32, 0.06);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(229, 35, 32, 0.18);
+    }
+
+    /* ============================================================
+       FINANCING SECTION
+       ============================================================ */
+    .financing-section {
+      padding: 100px 0;
+      background: radial-gradient(ellipse 70% 55% at 85% 18%, rgba(195, 25, 35, 0.16) 0%, rgba(140, 18, 26, 0.06) 45%, rgba(7, 8, 11, 0) 70%), #07080B;
+      color: #FFFFFF;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      scroll-margin-top: 70px;
+    }
+
+    .financing-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 54px auto;
+    }
+
+    .financing-title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.2vw, 50px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+
+    .financing-subtitle {
+      font-size: 16.5px;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .financing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    .fc-card {
+      background: #0C0E14;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fc-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(220, 38, 38, 0.5);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(220, 38, 38, 0.15);
+      background: rgba(24, 25, 30, 0.95);
+    }
+
+    .fc-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 18px;
+    }
+
+    .fc-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .fc-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin: 0 0 10px 0;
+    }
+
+    .fc-desc {
+      font-size: 13.5px;
+      color: #94A3B8;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+      flex-grow: 1;
+    }
+
+    .fc-foot {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* Snap & Sunbit Financing QR Section */
+    .financing-partners-wrap {
+      margin-top: 48px;
+      padding-top: 44px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+
+    .fp-heading {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .fp-sub {
+      font-size: 14.5px;
+      color: #94A3B8;
+      max-width: 620px;
+      margin: 0 auto 36px auto;
+    }
+
+    .financing-qr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 440px));
+      gap: 28px;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .fqr-card {
+      background: #0C0E14;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fqr-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(220, 38, 38, 0.6);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(220, 38, 38, 0.2);
+    }
+
+    .fqr-badge {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: var(--crimson);
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid rgba(220, 38, 38, 0.3);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .fqr-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .fqr-desc {
+      font-size: 13.5px;
+      color: #94A3B8;
+      line-height: 1.55;
+      margin-bottom: 22px;
+      max-width: 360px;
+    }
+
+    .fqr-code-box {
+      background: #FFFFFF;
+      padding: 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fqr-code-img {
+      width: 150px;
+      height: 150px;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .fqr-scan-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      color: #CBD5E1;
+      margin-bottom: 14px;
+    }
+
+    .fqr-btn {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-transform: none;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .fqr-btn:hover {
+      background: var(--crimson);
+      border-color: var(--crimson);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       CLIENT VOICES / EDITORIAL TESTIMONIALS
+       ============================================================ */
+    .testimonials {
+      padding: 110px 0;
+      background: var(--white);
+      color: var(--text-light);
+      border-bottom: 1px solid var(--hairline-light);
+    }
+
+    /* ============================================================
+       REVIEWS & INTERACTIVE CAROUSEL (CENTERED & EYE-CATCHING)
+       ============================================================ */
+    .testi-header-centered {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px auto;
+    }
+
+    .testi-header-centered h2 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4.2vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .testi-score-badge-centered {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+    }
+
+    .testi-score-badge-centered .stars {
+      color: #F59E0B;
+      letter-spacing: 10px;
+      font-size: clamp(60px, 6.5vw, 76px);
+      line-height: 1;
+      text-shadow: 0 4px 28px rgba(245, 158, 11, 0.45);
+      margin-bottom: 4px;
+    }
+
+    .testi-score-badge-centered .score-text {
+      font-size: clamp(26px, 3vw, 34px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+    }
+
+    .testi-score-badge-centered .score-subtext {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--text-light-muted);
+      font-weight: 500;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    /* Carousel Container (Shows 3 Reviews at a Time) */
+    .review-carousel-wrap {
+      position: relative;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    .review-carousel-viewport {
+      overflow: hidden;
+      width: 100%;
+      border-radius: 20px;
+      padding: 6px 0;
+    }
+
+    .review-carousel-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .rc-slide {
+      flex: 0 0 calc((100% - 48px) / 3);
+      min-width: calc((100% - 48px) / 3);
+      max-width: calc((100% - 48px) / 3);
+      box-sizing: border-box;
+      display: flex;
+      padding: 0;
+    }
+
+    .rc-card {
+      background: var(--canvas);
+      border: 1px solid var(--hairline-light);
+      border-radius: 18px;
+      padding: 32px 26px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .rc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.08);
+      border-color: rgba(229, 35, 32, 0.35);
+    }
+
+    .rc-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rc-stars {
+      color: #F59E0B;
+      letter-spacing: 3px;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .rc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(34, 197, 94, 0.1);
+      color: #16A34A;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .rc-quote {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-light);
+      font-weight: 500;
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    .rc-footer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline-light);
+    }
+
+    .rc-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .rc-author-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .rc-name {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--text-light);
+    }
+
+    .rc-sub {
+      font-size: 13px;
+      color: var(--text-light-muted);
+    }
+
+    /* Carousel Nav Arrows */
+    .rc-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--hairline-light);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    .rc-arrow:hover {
+      background: var(--crimson);
+      color: var(--white);
+      border-color: var(--crimson);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .rc-arrow-prev { left: 0; }
+    .rc-arrow-next { right: 0; }
+
+    /* Carousel Dots */
+    .rc-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .rc-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.16);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.25s ease;
+    }
+
+    .rc-dot.active {
+      width: 28px;
+      border-radius: 9999px;
+      background: var(--crimson);
+    }
+
+    /* ============================================================
+       INTAKE & APPOINTMENT BOOKING SECTION (CENTERED)
+    /* ============================================================
+       INTAKE & APPOINTMENT BOOKING SECTION (NO-SCROLL EDITORIAL SPLIT)
+       ============================================================ */
+    .estimate-section {
+      padding: 50px 0 54px 0;
+      background: var(--canvas);
+      color: var(--text-light);
+      border-bottom: 1px solid var(--hairline-light);
+      scroll-margin-top: 60px;
+    }
+
+    .estimate-header-centered {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 36px auto;
+    }
+
+    .estimate-header-centered .sec-eyebrow {
+      margin-bottom: 6px;
+    }
+
+    .estimate-header-centered h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 3.8vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      line-height: 1.05;
+      color: var(--text-light);
+      margin: 6px 0 10px 0;
+    }
+
+    .estimate-header-centered p {
+      font-size: 15px;
+      color: var(--text-light-muted);
+      line-height: 1.55;
+      margin: 0 auto;
+      max-width: 580px;
+    }
+
+    .estimate-split-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .estimate-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .estimate-call-card {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--hairline-light);
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .ecc-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    .ecc-phone {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--crimson);
+      text-decoration: none;
+      line-height: 1.1;
+      transition: color 0.2s;
+    }
+
+    .ecc-phone:hover {
+      color: var(--crimson-hover);
+    }
+
+    .ecc-sub {
+      font-size: 12px;
+      color: var(--text-light-muted);
+    }
+
+    .estimate-trust-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .etl-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .etl-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(22, 163, 74, 0.12);
+      color: #16A34A;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .estimate-form-wrap {
+      width: 100%;
+    }
+
+    .editorial-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--white);
+      padding: 26px 28px;
+      border: 1px solid var(--hairline-light);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .input-label {
+      font-family: var(--font-display);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .clean-input, .clean-select, .clean-textarea {
+      width: 100%;
+      background: var(--canvas);
+      border: 1px solid var(--hairline-light);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 14.5px;
+      color: var(--text-light);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .clean-input:focus, .clean-select:focus, .clean-textarea:focus {
+      outline: none;
+      border-color: var(--crimson);
+      background: var(--white);
+      box-shadow: 0 0 0 3px rgba(229, 35, 32, 0.1);
+    }
+
+    .clean-textarea {
+      min-height: 52px;
+      height: 52px;
+      resize: vertical;
+    }
+
+    .input-hint {
+      font-size: 11px;
+      color: var(--text-light-muted);
+      line-height: 1.35;
+    }
+
+    /* Pre-Selected Service Pill / Notification Banner */
+    .selected-service-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(229, 35, 32, 0.08);
+      border: 1px solid rgba(229, 35, 32, 0.35);
+      border-left: 4px solid var(--crimson);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 4px;
+      animation: bannerSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes bannerSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .ssb-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ssb-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--crimson);
+      box-shadow: 0 0 10px var(--crimson);
+      animation: pulseGlow 1.8s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 4px var(--crimson);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 14px var(--crimson), 0 0 22px rgba(229, 35, 32, 0.6);
+        transform: scale(1.15);
+      }
+    }
+
+    .ssb-text {
+      font-size: 13px;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .ssb-text strong {
+      color: var(--crimson);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .ssb-clear {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: var(--text-light-muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .ssb-clear:hover {
+      background: rgba(229, 35, 32, 0.1);
+      border-color: var(--crimson);
+      color: var(--crimson);
+    }
+
+    /* Large Accessible Calendar & Direct Type Controller */
+    .date-picker-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .date-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .date-input-field {
+      width: 100%;
+      padding-right: 46px !important;
+      font-size: 14.5px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .date-picker-toggle-btn {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--hairline-light);
+      background: var(--white);
+      color: var(--crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+
+    .date-picker-toggle-btn:hover {
+      background: var(--crimson);
+      color: var(--white);
+      border-color: var(--crimson);
+    }
+
+    .large-calendar-popover {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      z-index: 1000;
+      width: 330px;
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 16px;
+      animation: popoverFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .large-calendar-popover.open {
+      display: block;
+    }
+
+    @keyframes popoverFadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .lcal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--hairline-light);
+    }
+
+    .lcal-title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .lcal-nav-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      border: 1px solid var(--hairline-light);
+      background: var(--canvas);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.15s ease;
+      padding: 0;
+    }
+
+    .lcal-nav-btn:hover {
+      background: var(--crimson);
+      color: var(--white);
+      border-color: var(--crimson);
+    }
+
+    .lcal-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-light-muted);
+      margin-bottom: 8px;
+    }
+
+    .lcal-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+    }
+
+    .lcal-day {
+      width: 100%;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: none;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      padding: 0;
+    }
+
+    .lcal-day:hover:not(.disabled) {
+      background: rgba(229, 35, 32, 0.08);
+      border-color: rgba(229, 35, 32, 0.3);
+      color: var(--crimson);
+    }
+
+    .lcal-day.today {
+      border-color: var(--crimson);
+      font-weight: 800;
+    }
+
+    .lcal-day.selected {
+      background: var(--crimson) !important;
+      color: var(--white) !important;
+      border-color: var(--crimson) !important;
+      font-weight: 800;
+    }
+
+    .lcal-day.disabled {
+      color: #CBD5E1;
+      cursor: not-allowed;
+      background: none !important;
+    }
+
+    .lcal-day.other-month {
+      opacity: 0.3;
+    }
+
+    .lcal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      padding-top: 8px;
+      border-top: 1px solid var(--hairline-light);
+      font-size: 11.5px;
+    }
+
+    .lcal-footer button {
+      background: none;
+      border: none;
+      color: var(--crimson);
+      font-weight: 700;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+
+    .lcal-footer button:hover {
+      background: rgba(229, 35, 32, 0.08);
+    }
+
+    .lcal-hint {
+      color: var(--text-light-muted);
+      font-size: 11px;
+    }
+
+    .btn-submit-editorial {
+      background: var(--crimson);
+      color: var(--white);
+      border: none;
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.25s;
+      width: 100%;
+    }
+
+    .btn-submit-editorial:hover {
+      background: var(--crimson-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(229, 35, 32, 0.25);
+    }
+
+    /* ============================================================
+       LOCATION & ATELIER COORDINATES
+       ============================================================ */
+    .coordinates-section {
+      padding: 110px 0;
+      background: radial-gradient(ellipse 70% 55% at 85% 18%, rgba(195, 25, 35, 0.16) 0%, rgba(140, 18, 26, 0.06) 45%, rgba(7, 8, 11, 0) 70%), #07080B;
+      color: var(--white);
+    }
+
+    .coord-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .coord-info h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 3.8vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .coord-hairline-list {
+      border-top: 1px solid var(--hairline-dark);
+      margin-bottom: 32px;
+    }
+
+    .chl-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--hairline-dark);
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      font-size: 14px;
+    }
+
+    .chl-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crimson);
+    }
+
+    .chl-val {
+      color: var(--text-dark);
+    }
+
+    .map-frame {
+      position: relative;
+      height: 440px;
+      border: 1px solid var(--hairline-dark);
+      background: var(--dark-surface);
+      overflow: hidden;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: invert(90%) hue-rotate(180deg) contrast(90%);
+    }
+
+    /* ============================================================
+       FAQ SECTION
+       ============================================================ */
+    .faq-section {
+      padding: 100px 0;
+      background: var(--white);
+      color: var(--text-light);
+      border-bottom: 1px solid var(--hairline-light);
+      scroll-margin-top: 70px;
+    }
+
+    .faq-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px auto;
+    }
+
+    .faq-title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 4.2vw, 50px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: var(--text-light);
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+
+    .faq-subtitle {
+      font-size: 16.5px;
+      color: var(--text-light-muted);
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    .faq-accordion-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--canvas);
+      border: 1px solid var(--hairline-light);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(220, 38, 38, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-question {
+      padding: 22px 24px;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--text-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.05);
+      position: relative;
+      flex-shrink: 0;
+      transition: transform 0.25s ease, background 0.2s ease;
+    }
+
+    .faq-toggle-icon::before, .faq-toggle-icon::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: var(--text-light);
+      transform: translate(-50%, -50%);
+      transition: transform 0.25s ease;
+    }
+
+    .faq-toggle-icon::before {
+      width: 12px;
+      height: 2px;
+    }
+
+    .faq-toggle-icon::after {
+      width: 2px;
+      height: 12px;
+    }
+
+    .faq-item[open] .faq-toggle-icon {
+      background: var(--crimson);
+      transform: rotate(45deg);
+    }
+
+    .faq-item[open] .faq-toggle-icon::before,
+    .faq-item[open] .faq-toggle-icon::after {
+      background: #FFFFFF;
+    }
+
+    .faq-answer {
+      padding: 0 24px 22px 24px;
+      font-size: 15px;
+      color: var(--text-light-muted);
+      line-height: 1.65;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    .faq-answer strong {
+      color: var(--text-light);
+    }
+
+    /* ============================================================
+       EDITORIAL FOOTER
+       ============================================================ */
+    footer {
+      background: #05070A;
+      color: var(--text-dark-muted);
+      padding: 80px 0 36px;
+      border-top: 1px solid var(--hairline-dark);
+      font-size: 13px;
+    }
+
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .footer-logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-brand .brand-badge img {
+      height: 36px;
+      width: auto;
+    }
+
+    .footer-brand p {
+      color: var(--text-dark-muted);
+      line-height: 1.7;
+      max-width: 380px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-col-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col-links a {
+      color: var(--text-dark-muted);
+      transition: color 0.2s;
+    }
+
+    .footer-col-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom-bar {
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+    }
+
+    .mobile-phone-text,
+    .mobile-book-text {
+      display: none;
+    }
+
+    
+    /* ============================================================
+       SECTION 46: 4-STAGE PRECISION FLOW (Inspired by Auditor Specimen)
+       ============================================================ */
+    .craft-flow-wrap {
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .craft-flow-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .cfh-eyebrow {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: 10px;
+    }
+
+    .cfh-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .craft-flow-grid {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .cfg-card {
+      flex: 1;
+      background: #0B0E14;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 26px 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cfg-card:hover {
+      border-color: var(--crimson);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(220, 38, 38, 0.22);
+      background: #0F121A;
+    }
+
+    .cfg-step {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #64748B;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    .cfg-title {
+      font-family: var(--font-display);
+      font-size: clamp(19px, 1.8vw, 23px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+
+    .cfg-tag {
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--crimson);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cfg-tag .tag-arrow {
+      font-size: 11px;
+    }
+
+    .cfg-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #94A3B8;
+      margin-top: auto;
+    }
+
+    .cfg-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--crimson);
+      opacity: 0.85;
+      padding: 0 2px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .craft-flow-grid {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .cfg-arrow {
+        transform: rotate(90deg);
+        padding: 6px 0;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE DESIGN SYSTEM: TABLET & MOBILE PERFECTION
+       ============================================================ */
+
+    /* Tablet & Medium Screens (max-width: 1024px) */
+    @media (max-width: 1024px) {
+      .container { padding: 0 24px; }
+      .nav-inner { height: 72px; gap: 14px; }
+      .nav-logo-img { height: 46px; max-width: 185px; }
+      .nav-menu { gap: 16px; }
+      .nav-menu a { font-size: 12px; }
+      .nav-cta-cluster { gap: 10px; }
+      .nav-phone { font-size: 12.5px; padding: 7px 12px; }
+      .btn-book-appt { padding: 8px 14px; font-size: 11.5px; white-space: nowrap; }
+
+      .hero { min-height: auto; padding: 40px 0 0 0; }
+      .hero-content-left { max-width: 480px; padding: 10px 0 24px 0; }
+      .hero-video-element {
+        left: 70%;
+        top: 40%;
+        width: 130%;
+        min-width: 130%;
+        transform: translate(-50%, -50%);
+        opacity: 0.95;
+      }
+      .hero-video-overlay {
+        background: linear-gradient(90deg, rgba(8, 9, 11, 0.98) 0%, rgba(8, 9, 11, 0.92) 42%, rgba(8, 9, 11, 0.35) 65%, transparent 100%),
+                    linear-gradient(180deg, rgba(8, 9, 11, 0.6) 0%, transparent 40%, rgba(8, 9, 11, 0.98) 100%);
+      }
+      .hero-headline { font-size: clamp(34px, 4.2vw, 48px); line-height: 1.08; }
+      .hero-ribbon-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+      .services-section { padding: 90px 0; }
+      .services-header { margin-bottom: 48px; }
+      .services-title { font-size: 40px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .service-card-media { height: 210px; }
+      .service-card-body { padding: 22px; }
+
+      .craftsmanship { padding: 80px 0; }
+      .craft-header-block { margin-bottom: 40px; }
+      .ba-label { top: 18px; padding: 12px 24px; font-size: 20px; }
+      .ba-label-left { left: 25%; transform: translateX(-50%); }
+      .ba-label-right { left: 75%; transform: translateX(-50%); }
+      .craft-spec-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+      .statement-section { padding: 70px 0; }
+      .statement-grid { grid-template-columns: 1fr; gap: 32px; }
+
+      .im-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+      .im-card { padding: 14px 10px; font-size: 13.5px; }
+
+      .testimonials { padding: 80px 0; }
+      .review-carousel-wrap { padding: 0 44px; max-width: 100%; }
+      .review-carousel-track { gap: 18px; }
+      .rc-slide {
+        flex: 0 0 calc((100% - 18px) / 2);
+        min-width: calc((100% - 18px) / 2);
+        max-width: calc((100% - 18px) / 2);
+      }
+      .rc-card { padding: 26px 20px; }
+
+      .ig-section { padding: 80px 0; }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
+      .estimate-section { padding: 48px 0; }
+      .estimate-split-grid { grid-template-columns: 320px 1fr; gap: 28px; }
+      .editorial-form { padding: 22px 20px; gap: 12px; }
+
+      .financing-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .coord-section { padding: 80px 0; }
+      .footer-top-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+    }
+
+    /* Narrow Tablet / Foldable (max-width: 900px) */
+    @media (max-width: 900px) {
+      .nav-menu { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .hero-content-left { max-width: 440px; }
+      .hero-video-element { left: 74%; width: 140%; min-width: 140%; }
+      .im-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    }
+
+    /* Mobile Devices (max-width: 768px) */
+    @media (max-width: 768px) {
+      .desktop-phone-text,
+      .desktop-book-text {
+        display: none !important;
+      }
+      .mobile-phone-text,
+      .mobile-book-text {
+        display: inline !important;
+      }
+
+      .container { padding: 0 16px; }
+
+      /* Sleek Sticky Nav Bar (Never Stacks) */
+      .nav-inner {
+        height: 58px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      .nav-brand { flex-shrink: 0; }
+      .nav-logo-img { height: 34px; max-width: 140px; }
+      .nav-menu { display: none; }
+      .nav-cta-cluster {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+      }
+      .nav-phone {
+        font-size: 11px;
+        padding: 6px 10px;
+        gap: 5px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 9999px;
+      }
+      .btn-book-appt {
+        padding: 7px 11px;
+        font-size: 11px;
+        white-space: nowrap;
+        border-radius: 9999px;
+      }
+
+      /* Hero Section (Illuminated Car Crown + Left Editorial Focus) */
+      .hero {
+        min-height: auto;
+        padding: 16px 0 0 0;
+        overflow: hidden;
+      }
+      .hero-video-backdrop {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .hero-video-element {
+        position: absolute;
+        left: 50%;
+        top: 24%;
+        width: 100%;
+        min-width: 100%;
+        height: 48%;
+        min-height: auto;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        opacity: 0.65;
+        filter: contrast(1.15) brightness(1.05);
+      }
+      .hero-video-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(8, 9, 11, 0.35) 0%, rgba(8, 9, 11, 0.72) 24%, rgba(8, 9, 11, 0.98) 46%, #08090B 100%);
+      }
+      .hero-content-left {
+        max-width: 100%;
+        padding: 95px 0 8px 0;
+        text-align: left;
+      }
+      .hero-headline {
+        font-size: clamp(25px, 6.8vw, 30px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+      }
+      .hero-lead-text {
+        font-size: 14.5px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 18px;
+      }
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        width: 100%;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 13px;
+        border-radius: 8px;
+      }
+      .hero-trust-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 16px;
+        font-size: 13px;
+      }
+      .hero-bottom-ribbon {
+        margin-top: 20px;
+        padding: 14px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .hero-ribbon-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .ribbon-cell {
+        padding: 12px 14px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      /* Services (Waseem-Style Single Column Cards) */
+      .services-section { padding: 64px 0; }
+      .services-header { margin-bottom: 32px; text-align: left; }
+      .services-title { font-size: 28px; line-height: 1.12; }
+      .services-subtitle { font-size: 14.5px; }
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .service-card-media { height: 190px; }
+      .service-card-body { padding: 18px 16px; gap: 12px; }
+      .service-card-title { font-size: 18px; }
+      .service-card-desc { font-size: 13.5px; line-height: 1.5; }
+
+      /* Craftsmanship Before / After */
+      .craftsmanship { padding: 60px 0; }
+      .craft-header-block { margin-bottom: 28px; }
+      .craft-header-block h2 { font-size: 28px; line-height: 1.1; }
+      .craft-header-block p { font-size: 14.5px; line-height: 1.6; }
+      .ba-label { top: 12px; padding: 8px 18px; font-size: 16px; border-radius: 6px; }
+      .ba-label-left { left: 25%; transform: translateX(-50%); }
+      .ba-label-right { left: 75%; transform: translateX(-50%); }
+      .ba-caption-bar { padding: 12px 14px; font-size: 12px; gap: 8px; }
+      .craft-spec-grid { grid-template-columns: 1fr; gap: 18px; padding-top: 24px; }
+
+      /* Philosophy */
+      .statement-section { padding: 54px 0; }
+      .statement-grid { grid-template-columns: 1fr; gap: 22px; }
+      .statement-quote { font-size: 22px; line-height: 1.25; }
+      .sb-item { font-size: 14px; gap: 12px; }
+      .sb-text strong { font-size: 15px; }
+
+      /* Symmetrical Insurance Carrier Badges */
+      .insurance-matrix { padding: 44px 0; }
+      .im-title { font-size: 11.5px; letter-spacing: 0.1em; line-height: 1.45; padding: 0 10px; }
+      .im-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; }
+      .im-card { padding: 12px 6px; font-size: 11.5px; letter-spacing: 0.02em; min-height: 44px; }
+
+      /* Reviews & Carousel */
+      .testimonials { padding: 60px 0; }
+      .testi-header-centered { margin-bottom: 26px; }
+      .testi-header-centered h2 { font-size: 28px; }
+      .testi-score-badge-centered .stars { font-size: 32px; letter-spacing: 3px; }
+      .testi-score-badge-centered .score-text { font-size: 18px; }
+      .review-carousel-wrap { padding: 0; }
+      .review-carousel-track { gap: 14px; }
+      .rc-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+      .rc-arrow { display: none; }
+      .rc-card { padding: 22px 18px; border-radius: 14px; gap: 14px; }
+      .rc-quote { font-size: 14.5px; line-height: 1.55; }
+      .rc-stars { font-size: 18px; letter-spacing: 2px; }
+      .rc-card-top { flex-direction: row; justify-content: space-between; align-items: center; }
+
+      /* Instagram Live Updates (2x2 Mobile Grid) */
+      .ig-section { padding: 60px 0; }
+      .ig-header-bar { margin-bottom: 22px; flex-direction: column; align-items: flex-start; gap: 12px; }
+      .ig-title-area h2 { font-size: 28px; }
+      .btn-ig-follow { width: 100%; justify-content: center; min-height: 44px; }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .ig-card { border-radius: 6px; }
+
+      /* Intake & Booking Form */
+      .estimate-section { padding: 42px 0; }
+      .estimate-split-grid { grid-template-columns: 1fr; gap: 20px; }
+      .estimate-sidebar { gap: 14px; text-align: center; align-items: center; }
+      .estimate-call-card { width: 100%; max-width: 440px; }
+      .estimate-trust-list { display: none; }
+      .editorial-form { padding: 20px 16px; border-radius: 12px; gap: 12px; }
+      .form-row-2 { grid-template-columns: 1fr; gap: 12px; }
+      .clean-input, .clean-select, .clean-textarea {
+        font-size: 16px; /* Prevents auto-zoom in mobile Safari */
+        padding: 12px 14px;
+      }
+      .large-calendar-popover {
+        width: 100%;
+        max-width: 320px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      /* Financing Section Mobile */
+      .financing-section { padding: 60px 0; }
+      .financing-grid { grid-template-columns: 1fr; gap: 14px; }
+      .fc-card { padding: 22px 18px; }
+      .financing-partners-wrap { margin-top: 36px; padding-top: 32px; }
+      .financing-qr-grid { grid-template-columns: 1fr; gap: 20px; }
+      .fqr-card { padding: 24px 20px; }
+      .fqr-code-img { width: 130px; height: 130px; }
+
+      /* FAQ Section Mobile */
+      .faq-section { padding: 60px 0; }
+      .faq-header { margin-bottom: 36px; }
+      .faq-question { padding: 18px 18px; font-size: 15.5px; }
+      .faq-answer { padding: 0 18px 20px 18px; font-size: 14px; }
+
+      /* Coordinates & Map */
+      .coord-section { padding: 60px 0; }
+      .coord-grid { grid-template-columns: 1fr; gap: 28px; }
+      .map-frame { height: 260px; border-radius: 12px; }
+
+      /* Minimalist Footer */
+      footer { padding: 50px 0 28px; }
+      .footer-top-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom-bar { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 11.5px; }
+    }
+
+    /* Small Mobile Phones (max-width: 400px) */
+    @media (max-width: 400px) {
+      .container { padding: 0 14px; }
+      .nav-logo-img { height: 34px; max-width: 135px; }
+      .nav-phone span { display: none; }
+      .nav-phone {
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .btn-book-appt { padding: 6px 10px; font-size: 10.5px; }
+      .im-card { padding: 10px 4px; font-size: 10.5px; }
+      .hero-headline { font-size: 29px; }
+    }
+  
+
+.pin-marker {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #DC2626;
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 11px;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px #FFFFFF, 0 4px 10px rgba(0,0,0,0.6);
+  animation: pinPulse 2s infinite;
+  user-select: none;
+}
+
+@keyframes pinPulse {
+  0% { box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 0 rgba(220, 38, 38, 0.7); }
+  70% { box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 10px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+#element-hover-box {
+  position: absolute;
+  pointer-events: none;
+  z-index: 999;
+  border: 2px dashed #DC2626;
+  background: rgba(220, 38, 38, 0.08);
+  border-radius: 4px;
+  display: none;
+}
+
+#element-hover-label {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  background: #DC2626;
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.cursor-pin #site-preview-root,
+.cursor-pin #site-preview-root * {
+  cursor: crosshair !important;
+}
+
+.cursor-highlight #site-preview-root,
+.cursor-highlight #site-preview-root * {
+  cursor: pointer !important;
+}
+
+  </style>
+</head>
+<body class="bg-transparent text-[var(--foreground)] antialiased p-1">
+
+  <!-- Main Review Card Container (Full-bleed preview with bottom dock) -->
+  <div class="relative bg-[#080C14] text-[var(--foreground)] border border-[var(--border)] rounded-2xl shadow-2xl overflow-hidden font-sans">
+
+    <!-- The Scrollable Website Window starts IMMEDIATELY at the top (Zero obstruction of navbar/logo) -->
+    <div id="preview-window" class="relative overflow-y-auto max-h-[520px] bg-[#080C14] scroll-smooth">
+      
+      <!-- Responsive Frame Container -->
+      <div id="viewport-frame" class="w-full transition-all duration-300">
+        
+        <!-- Element Highlighter Box -->
+        <div id="element-hover-box">
+          <span id="element-hover-label">Element</span>
+        </div>
+
+        <!-- The actual Website Content -->
+        <div id="site-preview-root">
+
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="#top" class="nav-brand">
+          <img src="http://localhost:3000/assets/logo_master_transparent.png" alt="Auto Advantage Collision" class="nav-logo-img">
+        </a>
+
+        <nav class="nav-menu">
+          <a href="#top">Home</a>
+          <a href="#services">Services</a>
+          <a href="#craftsmanship">Craftsmanship</a>
+          <a href="#financing">Financing</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#book-appointment">Book Online</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-cta-cluster">
+          <a href="tel:3133861234" class="nav-phone">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="desktop-phone-text">(313) 386-1234</span>
+            <span class="mobile-phone-text">Call</span>
+          </a>
+          <a href="#book-appointment" class="btn-book-appt">
+            <span class="desktop-book-text">Book an Appointment</span>
+            <span class="mobile-book-text">Book Appt</span>
+          </a>
+          <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+      <a href="#top" class="nmd-link">Home</a>
+      <a href="#services" class="nmd-link">Services</a>
+      <a href="#craftsmanship" class="nmd-link">Craftsmanship</a>
+      <a href="#financing" class="nmd-link">Financing</a>
+      <a href="#reviews" class="nmd-link">Reviews</a>
+      <a href="#book-appointment" class="nmd-link">Book Online</a>
+      <a href="#faq" class="nmd-link">FAQ</a>
+    </div>
+  </header>
+
+  <!-- Cinematic Video Hero (Inspired by Waseem Range Rover) -->
+  <section class="hero">
+    <div class="hero-video-backdrop">
+      <video class="hero-video-element" autoplay muted loop playsinline preload="auto">
+        <source src="http://localhost:3000/assets/hero_cinematic.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content-left">
+        <h1 class="hero-headline">
+          The Best Auto Repair Shop in <br><span class="accent">Lincoln Park, MI.</span>
+        </h1>
+
+        <p class="hero-lead-text">
+          Certified Mechanics that specialize in Collision repair. <strong>Computerized laser unibody realignment</strong>, climate controlled downdraft spray booths, and direct insurance claims management with all major carriers.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#book-appointment" class="btn-hero-primary">
+            <span>Book an Appointment</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <a href="tel:3133861234" class="btn-hero-secondary">
+            <span>Call (313) 386-1234</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="hero-trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>All Insurances Accepted</span>
+          </div>
+          <div class="hero-trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Lifetime Warranty</span>
+          </div>
+          <div class="hero-trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Laser Frame Bench</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Glass Ribbon with 4 key facility specs -->
+    <div class="hero-bottom-ribbon">
+      <div class="container">
+        <div class="hero-ribbon-grid">
+          <div class="hr-item">
+            <strong>Facility Location</strong>
+            <span>1486 Southfield Rd, Lincoln Park, MI</span>
+          </div>
+          <div class="hr-item">
+            <strong>Paint Science</strong>
+            <span>Heated Downdraft Booth & Optical Match</span>
+          </div>
+          <div class="hr-item">
+            <strong>Warranty Coverage</strong>
+            <span>Written Lifetime Finish & Labor Warranty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Editorial Philosophy Statement -->
+  <section class="statement-section">
+    <div class="container">
+      <div class="statement-grid">
+        <div class="statement-quote">
+          When an accident damages your vehicle, <span class="red">we make sure it is safe, solid, and looks brand new again.</span>
+        </div>
+        <div class="statement-bullets">
+          <div class="sb-item">
+            <span class="sb-check">✓</span>
+            <div class="sb-text">
+              <strong>Straight Frame Alignment</strong>
+              We measure and pull bent frames back to factory millimeter specs so your car drives straight and protects your family.
+            </div>
+          </div>
+          <div class="sb-item">
+            <span class="sb-check">✓</span>
+            <div class="sb-text">
+              <strong>Exact Factory Color Match</strong>
+              We match your vehicle original paint in our heated spray booth so the finish is seamless and guaranteed for life.
+            </div>
+          </div>
+          <div class="sb-item">
+            <span class="sb-check">✓</span>
+            <div class="sb-text">
+              <strong>Safety Sensors & Airbag Reset</strong>
+              We test and calibrate all cameras, airbags, and radar collision sensors so they work the moment you drive away.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid (Inspired by Waseem Range Rover) -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="services-header">
+        <div class="sec-eyebrow">Certified Craftsmanship</div>
+        <h2 class="services-title">Our Specialized <span class="accent">Services</span></h2>
+        <p class="services-subtitle">
+          Professional collision repair and automotive restoration delivered by certified mechanics.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 01: Complete Auto Repair -->
+        <a href="#book-appointment" class="service-card" data-service="complete-auto-repair">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/complete_auto_repair.jpg" alt="Complete Auto Repair" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Mechanical &amp; Diagnostics</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Complete Auto Repair</h3>
+            </div>
+            <p class="service-card-desc">
+              Comprehensive mechanical and electrical repair for all vehicle makes and models. Certified master mechanics handling engine diagnostics, brake systems, suspension, steering, and factory scheduled maintenance.
+            </p>
+            <div class="service-card-cta">
+              <span>Book Service &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 02: Windshield Replacing -->
+        <a href="#book-appointment" class="service-card" data-service="windshield-replacing">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/windshield_replacing.jpg?v=2" alt="Windshield Replacing" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Auto Glass</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19 6.5 5h11L20 19H4z"></path>
+                <path d="M7 11h10"></path>
+                <path d="M12 5v14"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Windshield Replacing</h3>
+            </div>
+            <p class="service-card-desc">
+              OEM certified windshield replacement and auto glass restoration with factory urethane sealants. Complete safety recalibration for forward facing cameras and rain sensors.
+            </p>
+            <div class="service-card-cta">
+              <span>Book Glass Service &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 03: Insurance Claims -->
+        <a href="#book-appointment" class="service-card" data-service="insurance-claims">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/insurance_claims.jpg?v=2" alt="Insurance Claims" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Direct Carrier Billing</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Insurance Claims</h3>
+            </div>
+            <p class="service-card-desc">
+              Direct insurance claims management working with AAA, State Farm, Progressive, Geico, and all carriers. We handle digital photo estimates, adjuster paperwork, supplements, and loaner cars.
+            </p>
+            <div class="service-card-cta">
+              <span>File Claim Assistance &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 04: Collision Repair -->
+        <a href="#book-appointment" class="service-card" data-service="collision-repair">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/collision_repair.jpg" alt="Collision Repair" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Structural Restoration</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                <circle cx="7" cy="17" r="2"></circle>
+                <path d="M9 17h6"></path>
+                <circle cx="17" cy="17" r="2"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Collision Repair</h3>
+            </div>
+            <p class="service-card-desc">
+              Full collision restoration for major front, rear, and side impact accidents. Certified technicians rebuild structural crumple zones, align panels, and restore original factory crash safety.
+            </p>
+            <div class="service-card-cta">
+              <span>Request Collision Estimate &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 05: Body Painting -->
+        <a href="#book-appointment" class="service-card" data-service="body-painting">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/body_painting.jpg" alt="Body Painting" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Heated Downdraft</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9"></path>
+                <path d="M18 10l-4-4"></path>
+                <path d="M14 6l4-4 4 4-4 4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Body Painting</h3>
+            </div>
+            <p class="service-card-desc">
+              Computerized color matching and factory grade refinishing inside a sealed heated bake booth. Multi-stage clearcoat application backed by a written lifetime warranty against peeling or fading.
+            </p>
+            <div class="service-card-cta">
+              <span>Explore Paint Science &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 06: Frame Repair -->
+        <a href="#book-appointment" class="service-card" data-service="frame-repair">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/frame_repair.jpg" alt="Frame Repair" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Laser Measurement</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="22" y1="12" x2="18" y2="12"></line>
+                <line x1="6" y1="12" x2="2" y2="12"></line>
+                <line x1="12" y1="6" x2="12" y2="2"></line>
+                <line x1="12" y1="22" x2="12" y2="18"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Frame Repair</h3>
+            </div>
+            <p class="service-card-desc">
+              Chief laser datum computerized frame straightening bench. Heavy duty hydraulic pulling towers measure frame coordinates to factory millimeter tolerances, pulling bent frames back to true.
+            </p>
+            <div class="service-card-cta">
+              <span>View Laser Alignment &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 07: Dent Repair -->
+        <a href="#book-appointment" class="service-card" data-service="dent-repair">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/dent_repair.jpg?v=2" alt="Dent Repair" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Paintless Dent Repair</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17c4-4 14-4 18 0"></path>
+                <path d="M6 13.5c3-2.5 9-2.5 12 0"></path>
+                <path d="M14 3l4 4"></path>
+                <path d="M16 5l-7 7-2-2 7-7"></path>
+                <path d="M5 16l-2 2 2 2 2-2-2-2z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Dent Repair</h3>
+            </div>
+            <p class="service-card-desc">
+              Precision paintless dent repair (PDR) removing door dings, hail damage, and panel creases. Specialized metal manipulation removes damage while preserving your car original factory finish.
+            </p>
+            <div class="service-card-cta">
+              <span>Book Dent Removal &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 08: Towing -->
+        <a href="#book-appointment" class="service-card" data-service="towing">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/towing.jpg" alt="Towing Service" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">Emergency Dispatch</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Towing</h3>
+            </div>
+            <p class="service-card-desc">
+              Immediate flatbed towing and safe vehicle pickup straight to our Lincoln Park collision facility. Fast dispatch after an accident with towing costs directly billed to your insurance claim.
+            </p>
+            <div class="service-card-cta">
+              <span>Book Towing Dispatch &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Service 09: Free Estimate -->
+        <a href="#book-appointment" class="service-card" data-service="free-estimate">
+          <div class="service-card-media">
+            <img src="http://localhost:3000/assets/services/free_estimate.jpg" alt="Free Estimate" loading="lazy">
+            <div class="service-card-gradient"></div>
+            <div class="service-card-pill">100% No Obligation</div>
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <div class="service-title-row">
+              <div class="service-accent-bar"></div>
+              <h3 class="service-card-title">Free Estimate</h3>
+            </div>
+            <p class="service-card-desc">
+              Transparent, computerized written estimates with detailed parts, labor, and paint line items. Fast 15 minute in person inspections or digital photo uploads with zero out of pocket obligation.
+            </p>
+            <div class="service-card-cta">
+              <span>Request Free Estimate &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+            </div>
+    </div>
+  </section>
+
+  <!-- Craftsmanship & High-Res Master Before/After Showcase -->
+  <section class="craftsmanship" id="craftsmanship">
+    <div class="container">
+      <div class="craft-header-block">
+        <div class="sec-eyebrow">Craftsmanship Benchmark</div>
+        <h2>Clinical Accuracy. <span class="accent">Flawless</span> Restoration.</h2>
+        <p>
+          Every collision project is held to exact millimeter tolerances. We rebuild structural crumple zones, align quarter panels, and apply multistage clearcoats cured to factory hardness.
+        </p>
+      </div>
+
+      <!-- High-Definition Master Before / After Comparison -->
+      <div class="before-after-stage">
+        <div class="ba-label ba-label-left">Before</div>
+        <div class="ba-label ba-label-right">After</div>
+        <img src="http://localhost:3000/assets/before_after_master.jpg" alt="Mercedes S Class Collision Restoration Before and After">
+        <div class="ba-caption-bar">
+          <div>
+            <strong>Case Study: Mercedes Benz S Class</strong> &nbsp;|&nbsp; Front Quarter Panel, Hood Realignment & Bumper Rebuild
+          </div>
+        </div>
+      </div>
+
+      <!-- Specifications Grid (Premium Laser Benchmark Cards) -->
+      <!-- Premium 4-Stage Precision Restoration Process (Inspired by High-End Engineering) -->
+      <div class="craft-flow-wrap">
+        <div class="craft-flow-header">
+          <div class="cfh-eyebrow">CLINICAL CRAFTSMANSHIP &bull; 4-STAGE RESTORATION</div>
+          <h3 class="cfh-title">MEASURED. REALIGNED. <span class="accent">NEVER</span> COMPROMISED.</h3>
+        </div>
+
+        <div class="craft-flow-grid">
+          <!-- Step 01 -->
+          <div class="cfg-card">
+            <div class="cfg-step">01</div>
+            <h4 class="cfg-title">LASER BENCH</h4>
+            <div class="cfg-tag"><span class="tag-arrow">&#9656;</span> factory datum pull</div>
+            <p class="cfg-desc">Chief multipull hydraulic frame bench with laser coordinate scanners measuring down to factory millimeter specs.</p>
+          </div>
+
+          <div class="cfg-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="cfg-card">
+            <div class="cfg-step">02</div>
+            <h4 class="cfg-title">DOWNDRAFT</h4>
+            <div class="cfg-tag"><span class="tag-arrow">&#9656;</span> heated european bake</div>
+            <p class="cfg-desc">Heated downdraft spray booth featuring European climate controlled bake cycles for OEM clearcoat durability.</p>
+          </div>
+
+          <div class="cfg-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="cfg-card">
+            <div class="cfg-step">03</div>
+            <h4 class="cfg-title">COLOR SCAN</h4>
+            <div class="cfg-tag"><span class="tag-arrow">&#9656;</span> computerized pearl match</div>
+            <p class="cfg-desc">Digital spectrophotometer analysis accounts for paint age, sun fade, and metallic pearl flake density.</p>
+          </div>
+
+          <div class="cfg-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="cfg-card">
+            <div class="cfg-step">04</div>
+            <h4 class="cfg-title">LIFETIME</h4>
+            <div class="cfg-tag"><span class="tag-arrow">&#9656;</span> you are protected for life</div>
+            <p class="cfg-desc">Written lifetime warranty backing all structural realignment, body reconstruction, and clearcoat paint finishes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurance Carrier Matrix -->
+  <div class="insurance-matrix" id="insurance">
+    <div class="container">
+      <div class="im-inner">
+        <h3 class="im-title">Main Insurance Companies we often work with.</h3>
+        <div class="im-grid">
+          <div class="im-card">State Farm</div>
+          <div class="im-card">AAA Michigan</div>
+          <div class="im-card">Progressive</div>
+          <div class="im-card">Geico</div>
+          <div class="im-card">Allstate</div>
+          <div class="im-card">Liberty Mutual</div>
+          <div class="im-card">Farmers</div>
+          <div class="im-card">USAA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collision & Repair Financing Section -->
+  <section class="financing-section" id="financing">
+    <div class="container">
+      <div class="financing-header">
+        <h2 class="financing-title">Repair & Collision Financing</h2>
+        <p class="financing-subtitle">Flexible monthly payment solutions to cover insurance deductibles, major collision restoration, and custom refinishing with zero stress.</p>
+      </div>
+
+      <!-- Official Financing Partners (Snap & Sunbit with QR Codes) -->
+      <div class="financing-partners-wrap">
+        <h3 class="fp-heading">Financing Partners</h3>
+        <p class="fp-sub">Scan the QR code directly with your smartphone camera to apply online, or tap the button to prequalify.</p>
+
+        <div class="financing-qr-grid">
+          <!-- Snap Finance Card -->
+          <div class="fqr-card">
+            <span class="fqr-badge">Up to $5,000 Approval</span>
+            <h4 class="fqr-title">Snap Finance</h4>
+            <p class="fqr-desc">Get approved for up to $5,000 with flexible 100-day payment options and no credit needed. Fast application with an instant decision.</p>
+            <div class="fqr-code-box">
+              <img src="http://localhost:3000/assets/qr_snap_finance.png" alt="Snap Finance QR Code" class="fqr-code-img">
+            </div>
+            <div class="fqr-scan-label">Scan to apply on mobile</div>
+            <a href="https://snapf.in/Y6GAwGQ" target="_blank" rel="noopener" class="fqr-btn">
+              <span>Apply with Snap Finance</span>
+              <span>&#8250;</span>
+            </a>
+          </div>
+
+          <!-- Sunbit Card -->
+          <div class="fqr-card">
+            <span class="fqr-badge">Over 90% Approval Rate</span>
+            <h4 class="fqr-title">Sunbit</h4>
+            <p class="fqr-desc">Repair now and pay over time with 3-month 0% interest offers for all approved customers and zero hard credit check.</p>
+            <div class="fqr-code-box">
+              <img src="http://localhost:3000/assets/qr_sunbit.png" alt="Sunbit QR Code" class="fqr-code-img">
+            </div>
+            <div class="fqr-scan-label">Scan to apply on mobile</div>
+            <a href="https://sunbit.com/shop-directory/?category=collision-center&utm_source=POS022026" target="_blank" rel="noopener" class="fqr-btn">
+              <span>Apply with Sunbit</span>
+              <span>&#8250;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Voices & Reviews Carousel (Centered & Eye-Catching) -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="testi-header-centered">
+        <h2>Reviews</h2>
+        <div class="testi-score-badge-centered">
+          <div class="stars">★★★★★</div>
+          <div class="score-text">5.0 Verified Customer Rating</div>
+          <div class="score-subtext">Over 120 verified reviews from drivers in Lincoln Park, Allen Park, and Wayne County</div>
+        </div>
+      </div>
+
+      <!-- Interactive Carousel -->
+      <div class="review-carousel-wrap">
+        <button class="rc-arrow rc-arrow-prev" id="rc-prev" aria-label="Previous Review">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <div class="review-carousel-viewport" id="rc-viewport">
+          <div class="review-carousel-track" id="rc-track">
+            <!-- Review 1 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Esmayl and his crew at Auto Advantage repaired my truck after a bad front collision. The paint match is flawless and they handled the entire insurance adjuster communication with zero hassle."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">MT</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Marcus T.</div>
+                    <div class="rc-sub">Lincoln Park, MI &bull; Ford F-150 Front Collision & Frame Alignment</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Transparent pricing, fast turnaround, and quality bodywork. They kept me updated the entire time and my vehicle looks as clean as the day I bought it. Highly recommended in Downriver."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">SK</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Sarah K.</div>
+                    <div class="rc-sub">Allen Park, MI &bull; Jeep Grand Cherokee Quarter Panel Repair</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Honest technicians who truly take pride in their craft. Repaired a dent and scratch across two panels and the reflection is razor sharp. Best body shop experience in Wayne County."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">DR</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">David R.</div>
+                    <div class="rc-sub">Dearborn, MI &bull; Cadillac CT5 Multi-Panel Paint & Blend</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "After my highway collision I was worried my car would never feel the same. Auto Advantage aligned the chassis back to exact millimeter factory specs and handled all the Progressive paperwork directly. Ten out of ten service."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">AH</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Ali H.</div>
+                    <div class="rc-sub">Lincoln Park, MI &bull; Toyota Camry Frame Realignment</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Esmayl treats every customer like family. Honest appraisal, no hidden fees, and the paint was baked in their heated booth so it matches the factory finish completely. You can trust these guys."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">JL</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Jessica L.</div>
+                    <div class="rc-sub">Wyandotte, MI &bull; Chevrolet Tahoe Bumper & Sensor Calibration</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Rear-ended on Telegraph and thought my truck was going to be written off. Auto Advantage sourced OEM steel, rebuilt the bed alignment, and had it looking brand new within a week. Outstanding work."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">MB</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Michael B.</div>
+                    <div class="rc-sub">Taylor, MI &bull; Dodge Ram 1500 Bed & Tailgate Rebuild</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 7 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "They handled my front bumper repair and recalibrated all forward radar cameras in-house. Driving home on I-75 the lane assist worked perfectly. Professional, courteous, and timely."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">AC</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Amanda C.</div>
+                    <div class="rc-sub">Southgate, MI &bull; Honda Accord ADAS Calibration & Windshield</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 8 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "German pearl metallic paint is notoriously difficult to match, but Auto Advantage nailed the color code 100%. No orange peel, no blend lines, just mirror-smooth factory reflection."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">OK</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Omar K.</div>
+                    <div class="rc-sub">Dearborn Heights, MI &bull; BMW 5 Series M-Sport Bumper & Blend</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 9 -->
+            <div class="rc-slide">
+              <div class="rc-card">
+                <div class="rc-card-top">
+                  <div class="rc-stars">★★★★★</div>
+                  <div class="rc-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <span>Verified Google Review</span>
+                  </div>
+                </div>
+                <p class="rc-quote">
+                  "Took my Sierra here after another shop failed to align the front subframe properly. Esmayl's laser measuring system pulled the frame straight to factory specs. Drives dead straight now."
+                </p>
+                <div class="rc-footer">
+                  <div class="rc-avatar">RM</div>
+                  <div class="rc-author-info">
+                    <div class="rc-name">Robert M.</div>
+                    <div class="rc-sub">Trenton, MI &bull; GMC Sierra Laser Frame Straightening</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="rc-arrow rc-arrow-next" id="rc-next" aria-label="Next Review">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div class="rc-dots" id="rc-dots"></div>
+    </div>
+  </section>
+
+  <!-- Book An Appointment & Free Estimate Intake Section (Centered Top Header Layout) -->
+  <section class="estimate-section" id="book-appointment">
+    <div class="container">
+      <!-- Centered Section Header at Top -->
+      <div class="estimate-header-centered">
+        <h2>Book an <span class="accent">Appointment</span></h2>
+        <p>
+          Schedule your formal collision inspection or request an estimate. We confirm your reserved time within 15 minutes.
+        </p>
+      </div>
+
+      <div class="estimate-split-grid">
+        <!-- Sidebar / Contact Details -->
+        <div class="estimate-sidebar">
+          <div class="estimate-call-card">
+            <div class="ecc-label">Call to make an appointment over the phone or if you have questions</div>
+            <a href="tel:3133861234" class="ecc-phone">(313) 386-1234</a>
+            <div class="ecc-sub">Monday to Friday: 9:00 AM to 5:00 PM &bull; 100% Free Consultation</div>
+          </div>
+
+          <div class="estimate-trust-list">
+            <div class="etl-item">
+              <span class="etl-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>100% Free In Person Written Estimate</span>
+            </div>
+            <div class="etl-item">
+              <span class="etl-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Direct Carrier Insurance Billing & Adjuster Coordination</span>
+            </div>
+            <div class="etl-item">
+              <span class="etl-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <span>Lifetime Warranty on Automotive Refinishing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Form -->
+        <div class="estimate-form-wrap">
+            <form class="editorial-form" id="booking-form" onsubmit="event.preventDefault(); alert('Thank you! Your appointment request has been confirmed with Auto Advantage Collision. We will contact you to finalize the schedule.');">
+            <!-- Active Pre-Selected Service Notification Banner -->
+            <div class="selected-service-banner" id="selected-service-banner" style="display: none;">
+              <div class="ssb-left">
+                <div class="ssb-dot"></div>
+                <div class="ssb-text">Selected Service: <strong id="selected-service-name">Collision Repair</strong></div>
+              </div>
+              <button type="button" class="ssb-clear" id="clear-selected-service" aria-label="Change Selected Service">Change</button>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label class="input-label" for="booking-name">Full Name</label>
+                <input type="text" id="booking-name" class="clean-input" placeholder="e.g. Johnathan Miller" required>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="booking-phone">Phone Number</label>
+                <input type="tel" id="booking-phone" class="clean-input" placeholder="(313) 000.0000" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label class="input-label" for="booking-service">Service Requested</label>
+                <select class="clean-select" id="booking-service" required>
+                  <option value="">Select Service Needed</option>
+                  <option value="complete-auto-repair">Complete Auto Repair</option>
+                  <option value="windshield-replacing">Windshield Replacing</option>
+                  <option value="insurance-claims">Insurance Claims Assistance</option>
+                  <option value="collision-repair">Collision Repair</option>
+                  <option value="body-painting">Body Painting &amp; Refinishing</option>
+                  <option value="frame-repair">Laser Frame Repair</option>
+                  <option value="dent-repair">Paintless Dent Repair (PDR)</option>
+                  <option value="towing">Emergency Towing Service</option>
+                  <option value="free-estimate">Free In Person Estimate</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-label" for="booking-vehicle">Vehicle (Year, Make &amp; Model)</label>
+                <input type="text" id="booking-vehicle" class="clean-input" placeholder="e.g. 2023 Ford F-150" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="input-group">
+                <label class="input-label" for="booking-insurance">Insurance Carrier</label>
+                <select class="clean-select" id="booking-insurance">
+                  <option value="">Select carrier (or self pay)</option>
+                  <option value="state-farm">State Farm</option>
+                  <option value="aaa">AAA Michigan</option>
+                  <option value="progressive">Progressive</option>
+                  <option value="geico">Geico</option>
+                  <option value="allstate">Allstate</option>
+                  <option value="liberty-mutual">Liberty Mutual</option>
+                  <option value="farmers">Farmers</option>
+                  <option value="usaa">USAA</option>
+                  <option value="self-pay">Self Pay / No Claim</option>
+                  <option value="other">Other Insurance Carrier</option>
+                </select>
+              </div>
+              <!-- Time Slot: 30 min after opening (9:30 AM) to latest available appointment slot (4:30 PM) -->
+              <div class="input-group">
+                <label class="input-label" for="appt-time-select">Preferred Time Window</label>
+                <select class="clean-select" id="appt-time-select" required>
+                  <option value="">Select Time (9:30 AM to 4:00 PM)</option>
+                  <optgroup label="Appointment Windows">
+                    <option value="morning-window">Morning Window (9:30 AM to 12:00 PM)</option>
+                    <option value="midday-window">Midday Window (12:00 PM to 2:30 PM)</option>
+                    <option value="afternoon-window">Afternoon Window (2:30 PM to 4:30 PM)</option>
+                  </optgroup>
+                  <optgroup label="Specific Arrival Times">
+                    <option value="09:30 AM">9:30 AM (Earliest Arrival)</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                    <option value="12:00 PM">12:00 PM (Midday)</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="01:00 PM">1:00 PM</option>
+                    <option value="01:30 PM">1:30 PM</option>
+                    <option value="02:00 PM">2:00 PM</option>
+                    <option value="02:30 PM">2:30 PM</option>
+                    <option value="03:00 PM">3:00 PM</option>
+                    <option value="03:30 PM">3:30 PM</option>
+                    <option value="04:00 PM">4:00 PM (Latest Booking Slot)</option>
+                    
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <!-- Large Accessible Date Picker with Direct Typing -->
+              <div class="input-group">
+                <label class="input-label" for="appt-date-input">Preferred Appointment Date</label>
+                <div class="date-picker-wrap" id="date-picker-wrap">
+                  <div class="date-input-wrap">
+                    <input type="text" id="appt-date-input" class="clean-input date-input-field" placeholder="MM / DD / YYYY" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" title="Please enter a date in MM/DD/YYYY format or use the calendar" required autocomplete="off">
+                    <button type="button" class="date-picker-toggle-btn" id="date-picker-toggle" aria-label="Open larger calendar to select day" title="Open large calendar">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </button>
+                  </div>
+
+                  <!-- Large Accessible Calendar Popover -->
+                  <div class="large-calendar-popover" id="large-calendar-popover" role="dialog" aria-modal="true" aria-label="Choose appointment date">
+                    <div class="lcal-header">
+                      <button type="button" class="lcal-nav-btn" id="lcal-prev-month" aria-label="Previous Month">&#10094;</button>
+                      <div class="lcal-title" id="lcal-month-year">October 2026</div>
+                      <button type="button" class="lcal-nav-btn" id="lcal-next-month" aria-label="Next Month">&#10095;</button>
+                    </div>
+
+                    <div class="lcal-weekdays">
+                      <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                    </div>
+
+                    <div class="lcal-grid" id="lcal-days-grid">
+                      <!-- Dynamically rendered large accessible day buttons -->
+                    </div>
+
+                    <div class="lcal-footer">
+                      <span class="lcal-hint">Type above or tap a date</span>
+                      <div>
+                        <button type="button" id="lcal-today-btn">Today</button>
+                        <button type="button" id="lcal-close-btn" style="margin-left: 8px;">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span class="input-hint">Type date directly (MM/DD/YYYY) or tap calendar icon</span>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label" for="booking-damage">Damage / Collision Notes</label>
+                <input type="text" id="booking-damage" class="clean-input" placeholder="e.g. Front bumper impact, panel crease, scratch">
+                <span class="input-hint">Brief note of damage or insurance claim details</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit-editorial">
+              <span>Book Appointment and Request Estimate</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Coordinates -->
+  <section class="coordinates-section" id="coordinates">
+    <div class="container">
+      <div class="coord-grid">
+        <div class="coord-info">
+          <h2>Facility Coordinates</h2>
+
+          <div class="coord-hairline-list">
+            <div class="chl-item">
+              <span class="chl-title">Address</span>
+              <span class="chl-val">1486 Southfield Rd, Lincoln Park, MI 48146</span>
+            </div>
+            <div class="chl-item">
+              <span class="chl-title">Telephone</span>
+              <span class="chl-val"><a href="tel:3133861234" style="color: #fff; text-decoration: underline;">(313) 386-1234</a></span>
+            </div>
+            <div class="chl-item">
+              <span class="chl-title">Email</span>
+              <span class="chl-val"><a href="mailto:AUTOADVANTAGEONE@GMAIL.COM" style="color: #fff; text-decoration: underline;">AUTOADVANTAGEONE@GMAIL.COM</a></span>
+            </div>
+            <div class="chl-item">
+              <span class="chl-title">Hours</span>
+              <span class="chl-val">Monday to Friday: 9:00 AM to 5:00 PM<br>Saturday: By Appointment<br>Sunday: Emergency Towing Dispatch Only</span>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=1486+Southfield+Rd,+Lincoln+Park,+MI+48146" target="_blank" rel="noopener" class="btn-hero-secondary" style="display: inline-flex;">
+            <span>Open in Google Maps &#8250;</span>
+          </a>
+        </div>
+
+        <div class="map-frame">
+          <iframe 
+            title="Auto Advantage Collision Google Map"
+            src="https://maps.google.com/maps?q=1486+Southfield+Rd,+Lincoln+Park,+MI+48146&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="faq-header">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">Clear, honest answers about our repair availability, shop hours, estimating, and turnaround times.</p>
+      </div>
+
+      <div class="faq-accordion-grid">
+        <details class="faq-item" name="faq-accordion" open>
+          <summary class="faq-question">
+            <span>Can you take a look at my car?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, absolutely. Our shop is open Monday through Friday from 9:00 AM to 5:00 PM. You can stop by anytime during open hours, or book a free estimate right here on our website.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>What is your availability for an appointment?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>We take appointments Monday through Friday from 9:30 AM to 4:30 PM. You can choose the exact day and time slot that works best for you right on our online booking form.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>How much will the repair cost?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Every car and accident is different. Some cars just need small scratch touch-ups, while others need replacement panels or frame realignment. Looking at your car in person lets us write an exact, honest price before any work begins.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>Do I have the right to choose my own repair shop in Michigan?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, 100%. Under Michigan law, you have the full legal right to pick whatever repair shop you trust. Your insurance company cannot force you to use their shop. You choose us, and we handle everything directly with them.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>Do you handle the insurance claim paperwork for me?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, we do all the heavy lifting. We send photos and estimates to your insurance company, speak directly with their adjusters, and make sure all necessary repairs are approved and paid for without headache.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>How does deductible financing work if I do not want to pay all at once?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>If you have an insurance deductible like $500 or $1,000, we partner with Snap Finance and Sunbit so you can split that cost into simple monthly payments. You can pre-qualify in seconds with 0% interest options so you never have to delay repairs.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>How long will it take to get the work done?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>It is usually a couple days for parts to arrive, a couple days to fix the metal body panels, and a couple days to paint and bake the finish. Most repairs take between 5 to 10 business days from start to finish.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" name="faq-accordion">
+          <summary class="faq-question">
+            <span>Do you give a warranty on repairs and paint?</span>
+            <span class="faq-toggle-icon"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. All of our structural body repairs and computer-matched paint work come with a written lifetime warranty. For as long as you own your vehicle, our work is protected.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Live Atelier Feed -->
+  <section class="instagram-section" id="instagram">
+    <div class="container">
+      <div class="ig-header-bar">
+        <div class="ig-title-area">
+          <div class="sec-eyebrow">Live Shop Updates</div>
+          <h2>Follow us on Instagram</h2>
+          <p style="color: var(--text-light-muted); margin-top: 8px; font-size: 15px;">
+            Real active restorations, frame pulls, and customer handovers straight from our Lincoln Park shop floor.
+          </p>
+        </div>
+        <a href="https://www.instagram.com/auto_advantage_collision/" target="_blank" rel="noopener" class="btn-ig-follow">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Follow @auto_advantage_collision</span>
+        </a>
+      </div>
+
+      <div class="ig-grid">
+        <!-- Post 1: Ferrari 488 -->
+        <a href="https://www.instagram.com/auto_advantage_collision/" target="_blank" rel="noopener" class="ig-card">
+          <img src="http://localhost:3000/assets/ig_post_1.jpg" alt="Ferrari 488 GTB Collision Repair">
+          <div class="ig-overlay">
+            <div class="ig-overlay-top">
+              <span>@auto_advantage_collision</span>
+              <span>Ferrari 488 GTB</span>
+            </div>
+            <div class="ig-overlay-bottom">
+              <p>Ferrari 488 GTB structural unibody alignment and carbon panel reconstruction.</p>
+              <span class="ig-view-link">View On Instagram &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2: Jeep Grand Cherokee -->
+        <a href="https://www.instagram.com/auto_advantage_collision/" target="_blank" rel="noopener" class="ig-card">
+          <img src="http://localhost:3000/assets/ig_post_2.jpg" alt="Jeep Grand Cherokee Collision Reconstruction">
+          <div class="ig-overlay">
+            <div class="ig-overlay-top">
+              <span>@auto_advantage_collision</span>
+              <span>Jeep Grand Cherokee</span>
+            </div>
+            <div class="ig-overlay-bottom">
+              <p>Jeep Grand Cherokee front structural chassis pull and radiator support replacement.</p>
+              <span class="ig-view-link">View On Instagram &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3: Cadillac CT5 -->
+        <a href="https://www.instagram.com/auto_advantage_collision/" target="_blank" rel="noopener" class="ig-card">
+          <img src="http://localhost:3000/assets/ig_post_3.jpg" alt="Cadillac CT5 Front End Collision Repair">
+          <div class="ig-overlay">
+            <div class="ig-overlay-top">
+              <span>@auto_advantage_collision</span>
+              <span>Cadillac CT5</span>
+            </div>
+            <div class="ig-overlay-bottom">
+              <p>Cadillac CT5 direct insurance claim settlement and front fascia restoration.</p>
+              <span class="ig-view-link">View On Instagram &#8250;</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 4: Ford Explorer -->
+        <a href="https://www.instagram.com/auto_advantage_collision/" target="_blank" rel="noopener" class="ig-card">
+          <img src="http://localhost:3000/assets/ig_post_4.jpg" alt="Ford Explorer Quarter Panel Dent Repair">
+          <div class="ig-overlay">
+            <div class="ig-overlay-top">
+              <span>@auto_advantage_collision</span>
+              <span>Ford Explorer</span>
+            </div>
+            <div class="ig-overlay-bottom">
+              <p>Ford Explorer quarter panel metal reshaping and computerized factory color match.</p>
+              <span class="ig-view-link">View On Instagram &#8250;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Minimalist Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="http://localhost:3000/assets/logo_master_transparent.png" alt="Auto Advantage Collision" class="footer-logo-img">
+          </div>
+          <p>
+            Precision collision restoration, laser frame alignment, computerized color matching, and direct insurance claims management in Lincoln Park, Michigan.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Disciplines</div>
+          <div class="footer-col-links">
+            <a href="#book-appointment" data-service="complete-auto-repair">Complete Auto Repair</a>
+            <a href="#book-appointment" data-service="windshield-replacing">Windshield Replacing</a>
+            <a href="#book-appointment" data-service="insurance-claims">Insurance Claims</a>
+            <a href="#book-appointment" data-service="collision-repair">Collision Repair</a>
+            <a href="#book-appointment" data-service="body-painting">Body Painting</a>
+            <a href="#book-appointment" data-service="frame-repair">Frame Repair</a>
+            <a href="#book-appointment" data-service="dent-repair">Dent Repair</a>
+            <a href="#book-appointment" data-service="towing">Towing</a>
+            <a href="#book-appointment" data-service="free-estimate">Free Estimate</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <div class="footer-col-links">
+            <a href="#top">Home</a>
+            <a href="#services">Services</a>
+            <a href="#financing">Financing</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#book-appointment">Book Online</a>
+            <a href="#coordinates">Location</a>
+            <a href="#faq">FAQ</a>
+            <a href="#instagram">Instagram Feed</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Headquarters</div>
+          <p style="color: var(--white); margin-bottom: 8px; font-weight: 600;">
+            Auto Advantage Collision
+          </p>
+          <p style="margin-bottom: 12px;">
+            1486 Southfield Rd<br>
+            Lincoln Park, MI 48146
+          </p>
+          <p style="margin-bottom: 6px;">
+            <a href="tel:3133861234" style="color: var(--crimson-hover); font-weight: 700;">(313) 386-1234</a>
+          </p>
+          <p>
+            <a href="mailto:AUTOADVANTAGEONE@GMAIL.COM" style="color: var(--text-dark-muted);">AUTOADVANTAGEONE@GMAIL.COM</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; 2026 Auto Advantage Collision & Auto Repair. All rights reserved.</div>
+        <div>Downriver Detroit &bull; Lincoln Park &bull; Allen Park &bull; Taylor &bull; Wyandotte &bull; Dearborn</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reviews Carousel Script -->
+  <script>
+  (function() {
+    const track = document.getElementById('rc-track');
+    const prevBtn = document.getElementById('rc-prev');
+    const nextBtn = document.getElementById('rc-next');
+    const dotsContainer = document.getElementById('rc-dots');
+    const viewport = document.getElementById('rc-viewport');
+    if (!track || !viewport) return;
+
+    const slides = Array.from(track.children);
+    const total = slides.length;
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+
+    function getCardsPerView() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 992) return 2;
+      return 3;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, total - getCardsPerView());
+    }
+
+    function getSlideStep() {
+      if (!slides[0]) return 0;
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const trackStyle = window.getComputedStyle(track);
+      const gap = parseFloat(trackStyle.gap) || 0;
+      return slideWidth + gap;
+    }
+
+    function updateDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const cpv = getCardsPerView();
+      const numPages = Math.ceil(total / cpv);
+      const activePageIndex = Math.min(Math.floor(currentIndex / cpv), numPages - 1);
+
+      for (let i = 0; i < numPages; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'rc-dot' + (i === activePageIndex ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to review page ' + (i + 1));
+        dot.addEventListener('click', () => {
+          goToSlide(Math.min(i * cpv, getMaxIndex()));
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function goToSlide(index) {
+      const maxIdx = getMaxIndex();
+      if (index < 0) {
+        currentIndex = maxIdx;
+      } else if (index > maxIdx) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      const step = getSlideStep();
+      track.style.transform = `translateX(-${currentIndex * step}px)`;
+
+      if (dotsContainer) {
+        const cpv = getCardsPerView();
+        const activePageIndex = Math.min(Math.floor(currentIndex / cpv), Math.ceil(total / cpv) - 1);
+        const allDots = Array.from(dotsContainer.children);
+        allDots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activePageIndex);
+        });
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const cpv = getCardsPerView();
+        goToSlide(currentIndex - cpv);
+        resetAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const cpv = getCardsPerView();
+        goToSlide(currentIndex + cpv);
+        resetAutoPlay();
+      });
+    }
+
+    // Touch Swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewport.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const threshold = 40;
+      const cpv = getCardsPerView();
+      if (touchEndX < touchStartX - threshold) {
+        goToSlide(currentIndex + cpv);
+        resetAutoPlay();
+      } else if (touchEndX > touchStartX + threshold) {
+        goToSlide(currentIndex - cpv);
+        resetAutoPlay();
+      }
+    }
+
+    // Window Resize Handling
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        updateDots();
+        goToSlide(currentIndex);
+      }, 100);
+    });
+
+    // Auto Play
+    function startAutoPlay() {
+      clearInterval(autoPlayTimer);
+      autoPlayTimer = setInterval(() => {
+        const cpv = getCardsPerView();
+        goToSlide(currentIndex + cpv);
+      }, 6000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayTimer);
+      startAutoPlay();
+    }
+
+    viewport.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+    viewport.addEventListener('mouseleave', () => startAutoPlay());
+
+    window.addEventListener('load', () => {
+      updateDots();
+      goToSlide(currentIndex);
+    });
+
+    updateDots();
+    goToSlide(0);
+    startAutoPlay();
+  })();
+
+  // Large Accessible Calendar & Direct Type Controller
+  (function() {
+    const input = document.getElementById('appt-date-input');
+    const toggleBtn = document.getElementById('date-picker-toggle');
+    const popover = document.getElementById('large-calendar-popover');
+    const monthYearDisplay = document.getElementById('lcal-month-year');
+    const daysGrid = document.getElementById('lcal-days-grid');
+    const prevBtn = document.getElementById('lcal-prev-month');
+    const nextBtn = document.getElementById('lcal-next-month');
+    const todayBtn = document.getElementById('lcal-today-btn');
+    const closeBtn = document.getElementById('lcal-close-btn');
+
+    if (!input || !popover || !daysGrid) return;
+
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let viewYear = today.getFullYear();
+    let viewMonth = today.getMonth();
+    let selectedDate = null;
+
+    // Direct Typing Formatter (MM/DD/YYYY)
+    input.addEventListener('input', function() {
+      let val = input.value.replace(/\D/g, '');
+      if (val.length > 8) val = val.substring(0, 8);
+      
+      let formatted = '';
+      if (val.length > 4) {
+        formatted = val.substring(0, 2) + '/' + val.substring(2, 4) + '/' + val.substring(4);
+      } else if (val.length > 2) {
+        formatted = val.substring(0, 2) + '/' + val.substring(2);
+      } else {
+        formatted = val;
+      }
+      input.value = formatted;
+
+      if (val.length === 8) {
+        const m = parseInt(val.substring(0, 2), 10) - 1;
+        const d = parseInt(val.substring(2, 4), 10);
+        const y = parseInt(val.substring(4), 10);
+        const typedDate = new Date(y, m, d);
+        if (!isNaN(typedDate.getTime()) && typedDate >= today && m >= 0 && m <= 11 && d >= 1 && d <= 31) {
+          selectedDate = typedDate;
+          viewYear = y;
+          viewMonth = m;
+          renderCalendar();
+        }
+      }
+    });
+
+    function openCalendar() {
+      popover.classList.add('open');
+      renderCalendar();
+    }
+
+    function closeCalendar() {
+      popover.classList.remove('open');
+    }
+
+    function toggleCalendar(e) {
+      if (e) e.stopPropagation();
+      if (popover.classList.contains('open')) {
+        closeCalendar();
+      } else {
+        openCalendar();
+      }
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleCalendar);
+    input.addEventListener('click', openCalendar);
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+      const wrap = document.getElementById('date-picker-wrap');
+      if (wrap && !wrap.contains(e.target)) {
+        closeCalendar();
+      }
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeCalendar);
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        viewMonth--;
+        if (viewMonth < 0) {
+          viewMonth = 11;
+          viewYear--;
+        }
+        renderCalendar();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        viewMonth++;
+        if (viewMonth > 11) {
+          viewMonth = 0;
+          viewYear++;
+        }
+        renderCalendar();
+      });
+    }
+
+    if (todayBtn) {
+      todayBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        selectDate(new Date(today));
+        closeCalendar();
+      });
+    }
+
+    function selectDate(dateObj) {
+      selectedDate = new Date(dateObj);
+      viewYear = selectedDate.getFullYear();
+      viewMonth = selectedDate.getMonth();
+      const mm = String(selectedDate.getMonth() + 1).padStart(2, '0');
+      const dd = String(selectedDate.getDate()).padStart(2, '0');
+      const yyyy = selectedDate.getFullYear();
+      input.value = `${mm}/${dd}/${yyyy}`;
+      renderCalendar();
+    }
+
+    function renderCalendar() {
+      if (monthYearDisplay) {
+        monthYearDisplay.textContent = `${monthNames[viewMonth]} ${viewYear}`;
+      }
+
+      daysGrid.innerHTML = '';
+
+      const firstDayIndex = new Date(viewYear, viewMonth, 1).getDay();
+      const lastDayCurrentMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      const prevMonthLastDay = new Date(viewYear, viewMonth, 0).getDate();
+
+      // Prev month filler days
+      for (let x = firstDayIndex; x > 0; x--) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'lcal-day other-month disabled';
+        btn.disabled = true;
+        btn.textContent = prevMonthLastDay - x + 1;
+        daysGrid.appendChild(btn);
+      }
+
+      // Current month days
+      for (let day = 1; day <= lastDayCurrentMonth; day++) {
+        const cellDate = new Date(viewYear, viewMonth, day);
+        cellDate.setHours(0, 0, 0, 0);
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'lcal-day';
+        btn.textContent = day;
+        btn.setAttribute('aria-label', `${monthNames[viewMonth]} ${day}, ${viewYear}`);
+
+        // Is today?
+        if (cellDate.getTime() === today.getTime()) {
+          btn.classList.add('today');
+          btn.setAttribute('title', 'Today');
+        }
+
+        // Is selected?
+        if (selectedDate && cellDate.getTime() === selectedDate.getTime()) {
+          btn.classList.add('selected');
+        }
+
+        // Past date?
+        if (cellDate < today) {
+          btn.classList.add('disabled');
+          btn.disabled = true;
+        } else {
+          btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            selectDate(cellDate);
+            closeCalendar();
+          });
+        }
+
+        daysGrid.appendChild(btn);
+      }
+    }
+
+    // Initialize calendar
+    renderCalendar();
+  })();
+
+  // Service Auto-Select, Smooth Scroll & Highlighting Controller
+  (function() {
+    const serviceSelect = document.getElementById('booking-service');
+    const serviceBanner = document.getElementById('selected-service-banner');
+    const serviceNameSpan = document.getElementById('selected-service-name');
+    const clearBtn = document.getElementById('clear-selected-service');
+    const bookingSection = document.getElementById('book-appointment');
+
+    const serviceNames = {
+      'complete-auto-repair': 'Complete Auto Repair',
+      'windshield-replacing': 'Windshield Replacing',
+      'insurance-claims': 'Insurance Claims Assistance',
+      'collision-repair': 'Collision Repair',
+      'body-painting': 'Body Painting & Refinishing',
+      'frame-repair': 'Laser Frame Repair',
+      'dent-repair': 'Paintless Dent Repair (PDR)',
+      'towing': 'Emergency Towing Service',
+      'free-estimate': 'Free In Person Estimate'
+    };
+
+    function selectService(slug, triggerScroll = true) {
+      if (!serviceSelect || !slug) return;
+
+      // Set value in select dropdown
+      serviceSelect.value = slug;
+
+      // Update and reveal pre-selected service banner
+      if (serviceBanner && serviceNameSpan && serviceNames[slug]) {
+        serviceNameSpan.textContent = serviceNames[slug];
+        serviceBanner.style.display = 'flex';
+      }
+
+      // Smooth scroll to booking section
+      if (triggerScroll && bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Smoothly focus first input to prompt visitor info entry
+      setTimeout(() => {
+        const nameInput = document.getElementById('booking-name');
+        if (nameInput) nameInput.focus();
+      }, 500);
+    }
+
+    // Attach click listener to all elements with [data-service]
+    document.querySelectorAll('[data-service]').forEach(el => {
+      el.addEventListener('click', function(e) {
+        const slug = this.getAttribute('data-service');
+        if (slug) {
+          e.preventDefault();
+          selectService(slug, true);
+        }
+      });
+    });
+
+    // Handle manual change in select dropdown
+    if (serviceSelect) {
+      serviceSelect.addEventListener('change', function() {
+        const slug = this.value;
+        if (slug && serviceNames[slug]) {
+          if (serviceBanner && serviceNameSpan) {
+            serviceNameSpan.textContent = serviceNames[slug];
+            serviceBanner.style.display = 'flex';
+          }
+        } else {
+          if (serviceBanner) serviceBanner.style.display = 'none';
+        }
+      });
+    }
+
+    // Clear / Change button on banner
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        if (serviceSelect) {
+          serviceSelect.value = '';
+          serviceSelect.focus();
+        }
+        if (serviceBanner) {
+          serviceBanner.style.display = 'none';
+        }
+      });
+    }
+
+    // Check URL query param or hash on initial load (e.g. ?service=collision-repair)
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      const hash = window.location.hash.replace('#', '');
+      
+      if (serviceParam && serviceNames[serviceParam]) {
+        selectService(serviceParam, false);
+      } else if (hash && serviceNames[hash]) {
+        selectService(hash, false);
+      }
+    });
+  })();
+
+  // Mobile Navigation Drawer Toggle Controller
+  (function() {
+    const toggleBtn = document.getElementById('nav-mobile-toggle');
+    const drawer = document.getElementById('nav-mobile-drawer');
+    if (!toggleBtn || !drawer) return;
+
+    toggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isOpen = drawer.classList.toggle('open');
+      toggleBtn.classList.toggle('active', isOpen);
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Auto-close on clicking any link inside drawer
+    drawer.querySelectorAll('.nmd-link').forEach(link => {
+      link.addEventListener('click', function() {
+        drawer.classList.remove('open');
+        toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on clicking outside
+    document.addEventListener('click', function(e) {
+      if (!drawer.contains(e.target) && !toggleBtn.contains(e.target) && drawer.classList.contains('open')) {
+        drawer.classList.remove('open');
+        toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  // FAQ Exclusive Auto-Close Accordion Controller
+  (function() {
+    const faqDetails = document.querySelectorAll('.faq-item');
+    if (!faqDetails.length) return;
+
+    faqDetails.forEach(detail => {
+      detail.addEventListener('toggle', function() {
+        if (this.open) {
+          faqDetails.forEach(other => {
+            if (other !== this && other.open) {
+              other.open = false;
+            }
+          });
+        }
+      });
+    });
+  })();
+  </script>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FLOATING BOTTOM REVIEW DOCK (Discreet, unobtrusive, collapsible) -->
+    <div id="floating-dock" class="absolute bottom-3 left-1/2 -translate-x-1/2 z-[5000] flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-2xl rounded-full p-1.5 transition-all duration-300">
+      
+      <!-- Mode buttons -->
+      <button id="mode-browse" class="px-3 py-1 rounded-full text-xs font-semibold bg-red-600 text-white transition-all shadow-sm">
+        Browse
+      </button>
+      <button id="mode-pin" class="px-3 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all">
+        Add Pin
+      </button>
+      <button id="mode-highlight" class="px-3 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all">
+        Highlight
+      </button>
+
+      <!-- Viewport toggle -->
+      <button id="view-toggle" class="px-2.5 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all" title="Toggle Desktop / Mobile view">
+        Desktop
+      </button>
+
+      <!-- Notes counter button -->
+      <button id="btn-toggle-notes" class="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 hover:text-white transition-all">
+        <span>Notes</span>
+        <span id="notes-badge" class="bg-red-600 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+      </button>
+
+      <!-- Copy Feedback button -->
+      <button id="btn-copy-feedback" class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-sm">
+        Copy Notes
+      </button>
+
+      <!-- Minimize Button -->
+      <button id="btn-minimize-dock" class="p-1 text-slate-400 hover:text-white rounded-full transition-all" title="Hide controls so nothing is blocked">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+    </div>
+
+    <!-- Floating Reopen Pill (Shown when dock is minimized) -->
+    <button id="floating-reopen" class="absolute bottom-3 right-3 z-[5000] hidden items-center gap-1.5 bg-red-600 hover:bg-red-500 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-xl border border-white/30 transition-all cursor-pointer">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+      <span>Edit Tools</span>
+      <span id="reopen-badge" class="bg-black/40 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+    </button>
+
+    <!-- Notes Tray / Drawer -->
+    <div id="notes-tray" class="absolute bottom-14 left-4 right-4 z-[4900] bg-slate-900/95 backdrop-blur-xl border border-slate-700 rounded-xl p-3.5 shadow-2xl hidden flex-col gap-2 max-h-[190px] overflow-y-auto">
+      <div class="flex items-center justify-between pb-1.5 border-b border-slate-800">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200">Review Notes (<span id="notes-tray-count">0</span>)</h4>
+        <div class="flex items-center gap-3">
+          <button id="btn-clear-notes" class="text-[11px] text-red-400 hover:text-red-300">Clear All</button>
+          <button id="btn-close-tray" class="text-slate-400 hover:text-white text-sm font-bold">&times;</button>
+        </div>
+      </div>
+      <div id="notes-list-items" class="flex flex-col gap-2 pt-1 text-xs text-slate-400">
+      </div>
+    </div>
+
+    <!-- Pop-up Comment Modal -->
+    <div id="comment-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] hidden items-center justify-center p-4">
+      <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 w-full max-w-md shadow-2xl text-white font-sans">
+        <h3 id="modal-title" class="font-bold text-base text-white mb-1">Add Feedback</h3>
+        <p id="modal-target-desc" class="text-xs text-slate-400 mb-3 font-mono"></p>
+        <textarea id="modal-textarea" rows="3" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500 mb-4" placeholder="Type what you want changed here..."></textarea>
+        <div class="flex items-center justify-end gap-2">
+          <button id="modal-btn-cancel" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white bg-slate-800">Cancel</button>
+          <button id="modal-btn-save" class="px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-red-600 hover:bg-red-500">Save Note</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="feedback-toast" class="absolute top-4 left-1/2 -translate-x-1/2 bg-slate-900 border border-green-500/50 text-white px-4 py-1.5 rounded-full text-xs font-semibold shadow-2xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-200 z-[10000]">
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      <span id="toast-text">Feedback copied to clipboard!</span>
+    </div>
+
+  </div>
+
+  <script>
+  (function() {
+    let currentMode = 'browse';
+    let currentViewport = 'desktop';
+    let notes = JSON.parse(localStorage.getItem('auto_adv_embed_notes') || '[]');
+    let pendingNote = null;
+    let hoveredEl = null;
+
+    const root = document.getElementById('site-preview-root');
+    const previewWindow = document.getElementById('preview-window');
+    const viewportFrame = document.getElementById('viewport-frame');
+    const hoverBox = document.getElementById('element-hover-box');
+    const hoverLabel = document.getElementById('element-hover-label');
+    const modal = document.getElementById('comment-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-target-desc');
+    const modalText = document.getElementById('modal-textarea');
+    const toast = document.getElementById('feedback-toast');
+    const notesBadge = document.getElementById('notes-badge');
+    const reopenBadge = document.getElementById('reopen-badge');
+    const notesTrayCount = document.getElementById('notes-tray-count');
+    const notesTray = document.getElementById('notes-tray');
+    const notesList = document.getElementById('notes-list-items');
+    const dock = document.getElementById('floating-dock');
+    const reopenBtn = document.getElementById('floating-reopen');
+
+    const btnBrowse = document.getElementById('mode-browse');
+    const btnPin = document.getElementById('mode-pin');
+    const btnHighlight = document.getElementById('mode-highlight');
+    const btnViewToggle = document.getElementById('view-toggle');
+    const btnToggleNotes = document.getElementById('btn-toggle-notes');
+    const btnCloseTray = document.getElementById('btn-close-tray');
+    const btnCopyFeedback = document.getElementById('btn-copy-feedback');
+    const btnClearNotes = document.getElementById('btn-clear-notes');
+    const btnMinimizeDock = document.getElementById('btn-minimize-dock');
+    const btnModalSave = document.getElementById('modal-btn-save');
+    const btnModalCancel = document.getElementById('modal-btn-cancel');
+
+    // Minimize / Expand Dock
+    btnMinimizeDock.addEventListener('click', () => {
+      dock.classList.add('hidden');
+      reopenBtn.classList.remove('hidden');
+      reopenBtn.classList.add('flex');
+    });
+
+    reopenBtn.addEventListener('click', () => {
+      reopenBtn.classList.add('hidden');
+      reopenBtn.classList.remove('flex');
+      dock.classList.remove('hidden');
+    });
+
+    function setMode(mode) {
+      currentMode = mode;
+      document.body.classList.remove('cursor-pin', 'cursor-highlight');
+
+      btnBrowse.className = 'px-3 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all';
+      btnPin.className = 'px-3 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all';
+      btnHighlight.className = 'px-3 py-1 rounded-full text-xs font-medium text-slate-300 hover:text-white transition-all';
+
+      if (mode === 'browse') {
+        btnBrowse.className = 'px-3 py-1 rounded-full text-xs font-semibold bg-red-600 text-white transition-all shadow-sm';
+      } else if (mode === 'pin') {
+        btnPin.className = 'px-3 py-1 rounded-full text-xs font-semibold bg-red-600 text-white transition-all shadow-sm';
+        document.body.classList.add('cursor-pin');
+        showToast('Click anywhere on the website to place a pin');
+      } else if (mode === 'highlight') {
+        btnHighlight.className = 'px-3 py-1 rounded-full text-xs font-semibold bg-red-600 text-white transition-all shadow-sm';
+        document.body.classList.add('cursor-highlight');
+        showToast('Hover and click any component to edit');
+      }
+      hoverBox.style.display = 'none';
+    }
+
+    btnBrowse.addEventListener('click', () => setMode('browse'));
+    btnPin.addEventListener('click', () => setMode('pin'));
+    btnHighlight.addEventListener('click', () => setMode('highlight'));
+
+    btnViewToggle.addEventListener('click', () => {
+      if (currentViewport === 'desktop') {
+        currentViewport = 'mobile';
+        viewportFrame.className = 'max-w-[375px] mx-auto border-4 border-slate-700 rounded-3xl shadow-2xl overflow-hidden my-4 transition-all duration-300';
+        btnViewToggle.textContent = 'Mobile (375px)';
+        btnViewToggle.classList.add('text-blue-400');
+      } else {
+        currentViewport = 'desktop';
+        viewportFrame.className = 'w-full transition-all duration-300';
+        btnViewToggle.textContent = 'Desktop';
+        btnViewToggle.classList.remove('text-blue-400');
+      }
+      renderPins();
+    });
+
+    function showToast(msg) {
+      document.getElementById('toast-text').textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
+    }
+
+    function saveNotes() {
+      localStorage.setItem('auto_adv_embed_notes', JSON.stringify(notes));
+      updateUI();
+    }
+
+    function updateUI() {
+      notesBadge.textContent = notes.length;
+      reopenBadge.textContent = notes.length;
+      notesTrayCount.textContent = notes.length;
+      renderPins();
+      renderTray();
+    }
+
+    function renderPins() {
+      document.querySelectorAll('.pin-marker').forEach(p => p.remove());
+      notes.forEach((note, idx) => {
+        const pin = document.createElement('div');
+        pin.className = 'pin-marker';
+        pin.setAttribute('data-id', note.id);
+        pin.innerHTML = `<span>${idx + 1}</span>`;
+        pin.style.left = note.x + 'px';
+        pin.style.top = note.y + 'px';
+
+        pin.addEventListener('click', (e) => {
+          e.stopPropagation();
+          notesTray.classList.remove('hidden');
+          notesTray.classList.add('flex');
+          const card = document.getElementById('tray-note-' + note.id);
+          if (card) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            card.classList.add('border-red-500');
+            setTimeout(() => card.classList.remove('border-red-500'), 1500);
+          }
+        });
+
+        root.appendChild(pin);
+      });
+    }
+
+    function renderTray() {
+      if (notes.length === 0) {
+        notesList.innerHTML = '<p class="py-2 text-center text-slate-500 italic">No notes yet. Click "Add Pin" or "Highlight" to add feedback.</p>';
+        return;
+      }
+      notesList.innerHTML = notes.map((note, idx) => `
+        <div id="tray-note-${note.id}" class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex items-start justify-between gap-2 transition-all">
+          <div class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">${idx + 1}</span>
+            <div>
+              <p class="font-semibold text-slate-200 text-xs">${escapeHtml(note.targetLabel)}</p>
+              <p class="text-slate-300 text-xs mt-0.5">${escapeHtml(note.text)}</p>
+            </div>
+          </div>
+          <button onclick="window.removeEmbedNote('${note.id}')" class="text-slate-500 hover:text-red-400 text-sm px-1 font-bold">&times;</button>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(s) {
+      return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    window.removeEmbedNote = function(id) {
+      notes = notes.filter(n => n.id !== id);
+      saveNotes();
+    };
+
+    root.addEventListener('mousemove', (e) => {
+      if (currentMode !== 'highlight') {
+        hoverBox.style.display = 'none';
+        return;
+      }
+      const target = e.target.closest('h1, h2, h3, p, a, button, img, section, .hero-content, .card, .service-row, .gallery-item');
+      if (!target || target.classList.contains('pin-marker') || target.id === 'element-hover-box') {
+        hoverBox.style.display = 'none';
+        return;
+      }
+
+      const rRect = root.getBoundingClientRect();
+      const rect = target.getBoundingClientRect();
+
+      hoverBox.style.display = 'block';
+      hoverBox.style.left = (rect.left - rRect.left) + 'px';
+      hoverBox.style.top = (rect.top - rRect.top) + 'px';
+      hoverBox.style.width = rect.width + 'px';
+      hoverBox.style.height = rect.height + 'px';
+
+      const tag = target.tagName.toLowerCase();
+      const text = (target.textContent || '').trim().slice(0, 24);
+      hoverLabel.textContent = `<${tag}> ${text ? '"' + text + '..."' : ''}`;
+      hoveredEl = target;
+    });
+
+    root.addEventListener('click', (e) => {
+      if (currentMode === 'browse') return;
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      const rRect = root.getBoundingClientRect();
+      const x = Math.round(e.clientX - rRect.left);
+      const y = Math.round(e.clientY - rRect.top);
+
+      let label = 'Section Spot';
+      if (currentMode === 'highlight' && hoveredEl) {
+        const tag = hoveredEl.tagName.toUpperCase();
+        const snippet = (hoveredEl.textContent || '').trim().slice(0, 24);
+        label = `${tag}: ${snippet ? snippet : 'Element'}`;
+      } else {
+        const el = document.elementFromPoint(e.clientX, e.clientY);
+        if (el) {
+          const tag = el.tagName.toUpperCase();
+          const snippet = (el.textContent || '').trim().slice(0, 20);
+          label = `${tag}: ${snippet ? snippet : 'Section'}`;
+        }
+      }
+
+      pendingNote = {
+        id: 'note_' + Date.now(),
+        x: x,
+        y: y,
+        targetLabel: label,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+
+      modalTitle.textContent = `Feedback for: ${label}`;
+      modalDesc.textContent = `Target: ${label}`;
+      modalText.value = '';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modalText.focus();
+    });
+
+    btnModalCancel.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      pendingNote = null;
+    });
+
+    btnModalSave.addEventListener('click', () => {
+      const val = modalText.value.trim();
+      if (!val) return;
+      if (pendingNote) {
+        pendingNote.text = val;
+        notes.push(pendingNote);
+        saveNotes();
+        pendingNote = null;
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        showToast('Feedback note saved! Click "Copy Notes" when ready');
+      }
+    });
+
+    btnToggleNotes.addEventListener('click', () => {
+      notesTray.classList.toggle('hidden');
+      notesTray.classList.toggle('flex');
+    });
+
+    btnCloseTray.addEventListener('click', () => {
+      notesTray.classList.add('hidden');
+      notesTray.classList.remove('flex');
+    });
+
+    btnCopyFeedback.addEventListener('click', () => {
+      if (notes.length === 0) {
+        showToast('No notes yet to copy');
+        return;
+      }
+      let md = '### Visual Review Notes for Auto Advantage Website\n\n';
+      notes.forEach((n, i) => {
+        md += `${i + 1}. **[${n.targetLabel}]**: ${n.text}\n`;
+      });
+      md += '\nPlease apply these requested changes to the website.';
+
+      navigator.clipboard.writeText(md).then(() => {
+        showToast('Feedback copied! Paste it in the chat');
+      }).catch(() => {
+        showToast('Feedback copied! Paste it in the chat');
+      });
+    });
+
+    btnClearNotes.addEventListener('click', () => {
+      if (confirm('Clear all review notes?')) {
+        notes = [];
+        saveNotes();
+        showToast('All notes cleared');
+      }
+    });
+
+    updateUI();
+  })();
+  </script>
+
+</body>
+</html>
