@@ -30,3 +30,4 @@ slice_*.png
 # Operating system files
 .DS_Store
 Thumbs.db
+public/
