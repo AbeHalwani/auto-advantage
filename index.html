@@ -2830,25 +2830,51 @@
         max-width: 135px;
       }
 
-      /* Hero Section (Atmospheric Dark Luxury + Seamless Car Blend) */
+      /* Hero Section (True Atmospheric Video Backdrop on Mobile) */
       .hero {
         position: relative;
         min-height: auto;
         padding: 14px 0 0 0;
         background-color: #07080B;
-        background-image:
-          radial-gradient(ellipse 85% 50% at 50% 36%, rgba(220, 38, 38, 0.28) 0%, rgba(185, 28, 28, 0.12) 48%, rgba(7, 8, 11, 0) 75%),
-          radial-gradient(ellipse 65% 35% at 85% 15%, rgba(195, 25, 35, 0.16) 0%, transparent 68%),
-          linear-gradient(180deg, rgba(7, 8, 11, 0.5) 0%, #07080B 100%);
         overflow: hidden;
       }
       .hero-video-backdrop {
-        display: none !important;
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .hero-video-element {
+        position: absolute;
+        left: 50%;
+        top: 33%;
+        width: 175%;
+        min-width: 175%;
+        height: auto;
+        min-height: 80%;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+        opacity: 0.98;
+        filter: contrast(1.16) brightness(1.04);
+      }
+      .hero-video-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(ellipse 80% 48% at 50% 33%, rgba(220, 38, 38, 0.26) 0%, rgba(185, 28, 28, 0.12) 45%, rgba(7, 8, 11, 0) 72%),
+          linear-gradient(180deg, rgba(7, 8, 11, 0.94) 0%, rgba(7, 8, 11, 0.70) 16%, rgba(7, 8, 11, 0.0) 26%, rgba(7, 8, 11, 0.0) 45%, rgba(7, 8, 11, 0.85) 60%, #07080B 86%);
+        pointer-events: none;
       }
       .hero-content-left {
         max-width: 100%;
         padding: 0 !important;
         text-align: left;
+        position: relative;
+        z-index: 2;
       }
       .hero-headline {
         font-size: clamp(24px, 6.2vw, 29px);
@@ -2862,44 +2888,8 @@
       .hero-lead-text {
         font-size: 14.5px;
         line-height: 1.55;
-        margin-bottom: 10px;
-      }
-
-      /* Mobile Cinematic Video (Seamless Full-Bleed Screen Blend) */
-      .hero-mobile-media {
-        display: block !important;
-        width: calc(100% + 32px);
-        margin: 0 -16px 20px -16px;
-        position: relative;
-        background: radial-gradient(ellipse 75% 65% at 50% 50%, rgba(220, 38, 38, 0.28) 0%, rgba(185, 28, 28, 0.12) 45%, rgba(7, 8, 11, 0) 75%);
-        overflow: hidden;
-      }
-      .hero-mobile-video-wrap {
-        position: relative;
-        width: 100%;
-        height: clamp(200px, 58vw, 260px);
-        overflow: hidden;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        -webkit-mask-image: radial-gradient(ellipse 92% 78% at 50% 50%, #000000 45%, transparent 95%);
-        mask-image: radial-gradient(ellipse 92% 78% at 50% 50%, #000000 45%, transparent 95%);
-      }
-      .hero-mobile-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        mix-blend-mode: screen;
-        filter: contrast(1.22) brightness(1.08);
-      }
-      .hero-mobile-feather-overlay {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background:
-          linear-gradient(180deg, #07080B 0%, transparent 25%, transparent 75%, #07080B 100%),
-          linear-gradient(90deg, #07080B 0%, transparent 15%, transparent 85%, #07080B 100%);
+        margin-bottom: clamp(170px, 46vw, 220px);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
       .hero-actions {
         display: flex;
@@ -3236,16 +3226,6 @@
         <p class="hero-lead-text">
           Certified Mechanics that specialize in Collision repair. <strong>Computerized laser unibody realignment</strong>, climate controlled downdraft spray booths, and direct insurance claims management with all major carriers.
         </p>
-
-        <!-- Mobile Cinematic Video Feature (Seamless Atmospheric Blend) -->
-        <div class="hero-mobile-media">
-          <div class="hero-mobile-video-wrap">
-            <video class="hero-mobile-video" autoplay muted loop playsinline preload="auto" poster="assets/hero_test_screenshot_v2.png">
-              <source src="assets/hero_cinematic.mp4" type="video/mp4">
-            </video>
-            <div class="hero-mobile-feather-overlay"></div>
-          </div>
-        </div>
 
         <div class="hero-actions">
           <a href="#book-appointment" class="btn-hero-primary">
