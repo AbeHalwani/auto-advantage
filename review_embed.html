@@ -2298,14 +2298,29 @@
       align-items: center;
     }
 
+    .coord-header-centered {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px auto;
+    }
+
+    .coord-header-centered h2,
     .coord-info h2 {
       font-family: var(--font-display);
-      font-size: clamp(32px, 3.8vw, 48px);
+      font-size: clamp(32px, 4vw, 50px);
       font-weight: 800;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.025em;
       text-transform: none;
-      line-height: 1.05;
-      margin-bottom: 24px;
+      line-height: 1.1;
+      color: var(--white);
+      margin: 0 auto;
+    }
+
+    .coord-header-centered p {
+      font-size: 16px;
+      color: var(--text-dark-muted);
+      line-height: 1.6;
+      margin-top: 12px;
     }
 
     .coord-hairline-list {
@@ -2812,7 +2827,7 @@
       .editorial-form { padding: 22px 20px; gap: 12px; }
 
       .financing-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .coord-section { padding: 80px 0; }
+      .coordinates-section { padding: 80px 0; }
       .footer-top-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
     }
 
@@ -3104,10 +3119,13 @@
       .faq-question { padding: 18px 18px; font-size: 15.5px; }
       .faq-answer { padding: 0 18px 20px 18px; font-size: 14px; }
 
-      /* Coordinates & Map */
-      .coord-section { padding: 60px 0; }
-      .coord-grid { grid-template-columns: 1fr; gap: 28px; }
-      .map-frame { height: 260px; border-radius: 12px; }
+      /* Coordinates & Map Mobile */
+      .coordinates-section { padding: 60px 0 68px; }
+      .coord-header-centered { margin-bottom: 28px; text-align: center; }
+      .coord-header-centered h2 { font-size: clamp(26px, 7vw, 34px); text-align: center; }
+      .coord-grid { grid-template-columns: 1fr; gap: 32px; }
+      .chl-item { grid-template-columns: 95px 1fr; gap: 12px; padding: 14px 0; }
+      .map-frame { height: 280px; border-radius: 12px; }
 
       /* Minimalist Reorganized Mobile Footer */
       footer {
@@ -4420,14 +4438,16 @@
   <!-- Location & Coordinates -->
   <section class="coordinates-section" id="coordinates">
     <div class="container">
+      <div class="coord-header-centered">
+        <h2>Facility Coordinates</h2>
+      </div>
+
       <div class="coord-grid">
         <div class="coord-info">
-          <h2>Facility Coordinates</h2>
-
           <div class="coord-hairline-list">
             <div class="chl-item">
               <span class="chl-title">Address</span>
-              <span class="chl-val">1486 Southfield Rd, Lincoln Park, MI 48146</span>
+              <span class="chl-val">1486 Southfield Rd,<br>Lincoln Park, MI 48146</span>
             </div>
             <div class="chl-item">
               <span class="chl-title">Telephone</span>
