@@ -3058,14 +3058,47 @@
       .testi-header-centered h2 { font-size: 28px; }
       .testi-score-badge-centered .stars { font-size: 32px; letter-spacing: 3px; }
       .testi-score-badge-centered .score-text { font-size: 18px; }
-      .review-carousel-wrap { padding: 0; }
+      .review-carousel-wrap {
+        padding: 0;
+        position: relative;
+        margin-bottom: 8px;
+      }
       .review-carousel-track { gap: 14px; }
       .rc-slide {
         flex: 0 0 100%;
         min-width: 100%;
         max-width: 100%;
       }
-      .rc-arrow { display: none; }
+      .rc-arrow {
+        display: flex;
+        position: absolute;
+        top: auto;
+        bottom: -58px;
+        transform: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        color: var(--dark);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        z-index: 15;
+      }
+      .rc-arrow-prev { left: 4px; }
+      .rc-arrow-next {
+        right: 4px;
+        background: var(--crimson);
+        color: #FFFFFF;
+        border-color: var(--crimson);
+        box-shadow: 0 4px 16px rgba(195, 25, 35, 0.35);
+      }
+      .rc-dots {
+        margin-top: 14px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       .rc-card { padding: 22px 18px; border-radius: 14px; gap: 14px; }
       .rc-quote { font-size: 14.5px; line-height: 1.55; }
       .rc-stars { font-size: 18px; letter-spacing: 2px; }
