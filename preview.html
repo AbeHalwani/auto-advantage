@@ -2539,6 +2539,60 @@
       color: var(--white);
     }
 
+    .footer-hq-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-hq-address {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .fh-name {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .fh-street, .fh-city {
+      color: var(--text-dark-muted);
+    }
+
+    .footer-hq-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-hq-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--crimson-hover);
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-hq-phone:hover {
+      color: var(--white);
+    }
+
+    .footer-hq-email {
+      color: var(--text-dark-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      font-size: 12.5px;
+    }
+
+    .footer-hq-email:hover {
+      color: var(--white);
+    }
+
     .footer-bottom-bar {
       padding-top: 28px;
       border-top: 1px solid var(--hairline-dark);
@@ -3048,10 +3102,101 @@
       .coord-grid { grid-template-columns: 1fr; gap: 28px; }
       .map-frame { height: 260px; border-radius: 12px; }
 
-      /* Minimalist Footer */
-      footer { padding: 50px 0 28px; }
-      .footer-top-grid { grid-template-columns: 1fr; gap: 28px; }
-      .footer-bottom-bar { flex-direction: column; align-items: flex-start; gap: 10px; font-size: 11.5px; }
+      /* Minimalist Reorganized Mobile Footer */
+      footer {
+        padding: 38px 0 24px;
+      }
+      .footer-top-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 16px;
+        margin-bottom: 24px;
+      }
+      .footer-col-brand {
+        grid-column: 1 / 3 !important;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-logo-wrap {
+        margin-bottom: 10px;
+      }
+      .footer-logo-img {
+        height: 38px;
+      }
+      .footer-brand p {
+        font-size: 12.5px;
+        line-height: 1.55;
+        max-width: 100%;
+        color: rgba(255, 255, 255, 0.65);
+        margin: 0;
+      }
+      .footer-heading {
+        font-size: 11.5px;
+        letter-spacing: 0.12em;
+        margin-bottom: 10px;
+        color: var(--white);
+      }
+      .footer-col-links {
+        gap: 7px;
+      }
+      .footer-col-links a {
+        font-size: 12px;
+        line-height: 1.35;
+        color: rgba(255, 255, 255, 0.65);
+        padding: 2px 0;
+      }
+      .footer-col-disciplines {
+        grid-column: 1;
+      }
+      .footer-col-nav {
+        grid-column: 2;
+      }
+      .footer-col-hq {
+        grid-column: 1 / 3 !important;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .footer-hq-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .footer-hq-address {
+        gap: 2px;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .fh-name {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--white);
+      }
+      .fh-street, .fh-city {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .footer-hq-contact {
+        gap: 6px;
+      }
+      .footer-hq-phone {
+        font-size: 13px;
+        gap: 6px;
+      }
+      .footer-hq-email {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.6);
+        word-break: break-all;
+      }
+      .footer-bottom-bar {
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 11px;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.45);
+      }
     }
 
     /* Small Mobile Phones (max-width: 480px) */
@@ -5039,7 +5184,7 @@ body.mode-highlight #review-viewport-container {
   <footer>
     <div class="container">
       <div class="footer-top-grid">
-        <div class="footer-brand">
+        <div class="footer-brand footer-col-brand">
           <div class="footer-logo-wrap">
             <img src="assets/logo_master_transparent.png" alt="Auto Advantage Collision" class="footer-logo-img">
           </div>
@@ -5048,7 +5193,7 @@ body.mode-highlight #review-viewport-container {
           </p>
         </div>
 
-        <div>
+        <div class="footer-col-disciplines">
           <div class="footer-heading">Disciplines</div>
           <div class="footer-col-links">
             <a href="#book-appointment" data-service="complete-auto-repair">Complete Auto Repair</a>
@@ -5063,7 +5208,7 @@ body.mode-highlight #review-viewport-container {
           </div>
         </div>
 
-        <div>
+        <div class="footer-col-nav">
           <div class="footer-heading">Navigation</div>
           <div class="footer-col-links">
             <a href="#top">Home</a>
@@ -5077,21 +5222,22 @@ body.mode-highlight #review-viewport-container {
           </div>
         </div>
 
-        <div>
+        <div class="footer-col-hq">
           <div class="footer-heading">Headquarters</div>
-          <p style="color: var(--white); margin-bottom: 8px; font-weight: 600;">
-            Auto Advantage Collision
-          </p>
-          <p style="margin-bottom: 12px;">
-            1486 Southfield Rd<br>
-            Lincoln Park, MI 48146
-          </p>
-          <p style="margin-bottom: 6px;">
-            <a href="tel:3133861234" style="color: var(--crimson-hover); font-weight: 700;">(313) 386-1234</a>
-          </p>
-          <p>
-            <a href="mailto:AUTOADVANTAGEONE@GMAIL.COM" style="color: var(--text-dark-muted);">AUTOADVANTAGEONE@GMAIL.COM</a>
-          </p>
+          <div class="footer-hq-content">
+            <div class="footer-hq-address">
+              <span class="fh-name">Auto Advantage Collision</span>
+              <span class="fh-street">1486 Southfield Rd</span>
+              <span class="fh-city">Lincoln Park, MI 48146</span>
+            </div>
+            <div class="footer-hq-contact">
+              <a href="tel:3133861234" class="footer-hq-phone">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>(313) 386-1234</span>
+              </a>
+              <a href="mailto:AUTOADVANTAGEONE@GMAIL.COM" class="footer-hq-email">AUTOADVANTAGEONE@GMAIL.COM</a>
+            </div>
+          </div>
         </div>
       </div>
 
