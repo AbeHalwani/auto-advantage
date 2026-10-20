@@ -3079,11 +3079,20 @@
       gap: 10px;
       align-items: center;
       box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.7);
+      transform: translateY(120%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
     }
 
     @media (max-width: 768px) {
       .mobile-sticky-action-bar {
         display: flex !important;
+      }
+      .mobile-sticky-action-bar.is-visible {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
       }
       body {
         padding-bottom: 74px !important;
@@ -5610,6 +5619,54 @@ body.mode-highlight #review-viewport-container {
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
+
+  <!-- Sticky Mobile Bar Reveal Controller -->
+  <script>
+  (function() {
+    var heroActions = document.querySelector('.hero-actions');
+    var stickyBar = document.getElementById('mobileStickyBar');
+    var formSubmit = document.querySelector('.btn-submit-editorial');
+
+    if (!heroActions || !stickyBar) return;
+
+    function checkVisibility() {
+      var rect = heroActions.getBoundingClientRect();
+      var heroInView = (rect.bottom > 0 && rect.top < window.innerHeight);
+
+      var formInView = false;
+      if (formSubmit) {
+        var fRect = formSubmit.getBoundingClientRect();
+        formInView = (fRect.bottom > 0 && fRect.top < window.innerHeight);
+      }
+
+      if (!heroInView && !formInView) {
+        stickyBar.classList.add('is-visible');
+      } else {
+        stickyBar.classList.remove('is-visible');
+      }
+    }
+
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    window.addEventListener('resize', checkVisibility, { passive: true });
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function() {
+        checkVisibility();
+      }, {
+        root: null,
+        threshold: [0, 0.1, 0.5, 1.0]
+      });
+
+      observer.observe(heroActions);
+      if (formSubmit) {
+        observer.observe(formSubmit);
+      }
+    }
+
+    // Initial check on DOM load
+    checkVisibility();
+  })();
+  </script>
 
 
 </div><!-- end review-viewport-container -->
