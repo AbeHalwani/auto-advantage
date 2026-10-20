@@ -430,6 +430,14 @@
       font-weight: 600;
     }
 
+    .hero-lead-mobile {
+      display: none;
+    }
+
+    .hero-lead-desktop {
+      display: inline;
+    }
+
     .hero-actions {
       display: flex;
       align-items: center;
@@ -2898,6 +2906,12 @@
         margin-bottom: clamp(170px, 46vw, 220px);
         text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
+      .hero-lead-desktop {
+        display: none !important;
+      }
+      .hero-lead-mobile {
+        display: inline !important;
+      }
       .hero-actions {
         display: flex;
         flex-direction: column;
@@ -3320,7 +3334,8 @@
         </h1>
 
         <p class="hero-lead-text">
-          Certified Mechanics that specialize in Collision repair. <strong>Computerized laser unibody realignment</strong>, climate controlled downdraft spray booths, and direct insurance claims management with all major carriers.
+          <span class="hero-lead-desktop">Certified Mechanics that specialize in Collision repair. <strong>Computerized laser unibody realignment</strong>, climate controlled downdraft spray booths, and direct insurance claims management with all major carriers.</span>
+          <span class="hero-lead-mobile">Certified mechanics specializing in <strong>collision repair</strong>, <strong>laser frame alignment</strong>, and direct insurance claims.</span>
         </p>
 
         <div class="hero-actions">
